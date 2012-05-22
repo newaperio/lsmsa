@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @prospy.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @prospy.email %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @prospy.address %>
+</p>
+
+<p>
+  <b>Interest:</b>
+  <%= @prospy.interest %>
+</p>
+
+<p>
+  <b>High school:</b>
+  <%= @prospy.high_school %>
+</p>
+
+
+<%= link_to 'Edit', edit_prospy_path(@prospy) %> |
+<%= link_to 'Back', prospies_path %>

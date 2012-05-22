@@ -1,0 +1,37 @@
+<%= form_for(@prospy) do |f| %>
+  <% if @prospy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prospy.errors.count, "error") %> prohibited this prospy from being saved:</h2>
+
+      <ul>
+      <% @prospy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :interest %><br />
+    <%= f.text_area :interest %>
+  </div>
+  <div class="field">
+    <%= f.label :high_school %><br />
+    <%= f.text_field :high_school %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

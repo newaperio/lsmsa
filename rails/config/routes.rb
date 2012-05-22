@@ -1,4 +1,10 @@
 Lsmsa::Application.routes.draw do
+  resources :years
+
+  resources :concentrations
+
+  resources :prospies
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
