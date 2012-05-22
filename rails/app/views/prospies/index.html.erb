@@ -1,0 +1,31 @@
+<h1>Listing prospies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Address</th>
+    <th>Interest</th>
+    <th>High school</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prospies.each do |prospy| %>
+  <tr>
+    <td><%= prospy.name %></td>
+    <td><%= prospy.email %></td>
+    <td><%= prospy.address %></td>
+    <td><%= prospy.interest %></td>
+    <td><%= prospy.high_school %></td>
+    <td><%= link_to 'Show', prospy %></td>
+    <td><%= link_to 'Edit', edit_prospy_path(prospy) %></td>
+    <td><%= link_to 'Destroy', prospy, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prospy', new_prospy_path %>
