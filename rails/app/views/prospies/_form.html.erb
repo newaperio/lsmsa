@@ -38,7 +38,7 @@
   <div class="control-group">
     <%= f.label :concentration_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :concentration_id, :class => 'number_field' %>
+      <%= f.select :concentration_id, Concentration.all.collect {|c| [c.name, c.id]} %>
     </div>
   </div>
   <div class="control-group">
@@ -52,5 +52,6 @@
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 prospies_path, :class => 'btn' %>
+                t.strftime("Printed on %m/%d/%Y")
   </div>
 <% end %>
