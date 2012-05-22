@@ -10,6 +10,9 @@
 #import <Restkit/Restkit.h>
 
 @interface FacebookPhotoModel : NSObject
+{
+    RKObjectManager * 
+}
 
 
 
