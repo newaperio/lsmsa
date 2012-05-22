@@ -1,30 +1,31 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = @prospy.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human %></h1>
 
-<p>
-  <b>Name:</b>
-  <%= @prospy.name %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @prospy.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @prospy.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:address) %>:</strong></dt>
+  <dd><%= @prospy.address %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:interest) %>:</strong></dt>
+  <dd><%= @prospy.interest %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:high_school) %>:</strong></dt>
+  <dd><%= @prospy.high_school %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:concentration_id) %>:</strong></dt>
+  <dd><%= @prospy.concentration_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:year_id) %>:</strong></dt>
+  <dd><%= @prospy.year_id %></dd>
+</dl>
 
-<p>
-  <b>Email:</b>
-  <%= @prospy.email %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @prospy.address %>
-</p>
-
-<p>
-  <b>Interest:</b>
-  <%= @prospy.interest %>
-</p>
-
-<p>
-  <b>High school:</b>
-  <%= @prospy.high_school %>
-</p>
-
-
-<%= link_to 'Edit', edit_prospy_path(@prospy) %> |
-<%= link_to 'Back', prospies_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              prospies_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_prospy_path(@prospy), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              prospy_path(@prospy),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
