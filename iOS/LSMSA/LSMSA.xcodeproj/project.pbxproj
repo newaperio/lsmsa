@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20B9A1AE156BE07200B29611 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AD156BE07200B29611 /* UIKit.framework */; };
+		20B9A1B0156BE07200B29611 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AF156BE07200B29611 /* Foundation.framework */; };
+		20B9A1B2156BE07200B29611 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1B1156BE07200B29611 /* CoreGraphics.framework */; };
+		20B9A1B8156BE07200B29611 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1B6156BE07200B29611 /* InfoPlist.strings */; };
+		20B9A1BA156BE07200B29611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1B9156BE07200B29611 /* main.m */; };
+		20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1BD156BE07200B29611 /* AppDelegate.m */; };
+		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20B9A1A9156BE07200B29611 /* LSMSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSMSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20B9A1AD156BE07200B29611 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		20B9A1AF156BE07200B29611 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		20B9A1B1156BE07200B29611 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		20B9A1B5156BE07200B29611 /* LSMSA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LSMSA-Info.plist"; sourceTree = "<group>"; };
+		20B9A1B7156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		20B9A1B9156BE07200B29611 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20B9A1BB156BE07200B29611 /* LSMSA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LSMSA-Prefix.pch"; sourceTree = "<group>"; };
+		20B9A1BC156BE07200B29611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		20B9A1BD156BE07200B29611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		20B9A1C0156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20B9A1A6156BE07200B29611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20B9A1AE156BE07200B29611 /* UIKit.framework in Frameworks */,
+				20B9A1B0156BE07200B29611 /* Foundation.framework in Frameworks */,
+				20B9A1B2156BE07200B29611 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20B9A19E156BE07200B29611 = {
+			isa = PBXGroup;
+			children = (
+				20B9A1B3156BE07200B29611 /* LSMSA */,
+				20B9A1AC156BE07200B29611 /* Frameworks */,
+				20B9A1AA156BE07200B29611 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20B9A1AA156BE07200B29611 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A1A9156BE07200B29611 /* LSMSA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20B9A1AC156BE07200B29611 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A1AD156BE07200B29611 /* UIKit.framework */,
+				20B9A1AF156BE07200B29611 /* Foundation.framework */,
+				20B9A1B1156BE07200B29611 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20B9A1B3156BE07200B29611 /* LSMSA */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
+				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
+				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
+				20B9A1B4156BE07200B29611 /* Supporting Files */,
+			);
+			path = LSMSA;
+			sourceTree = "<group>";
+		};
+		20B9A1B4156BE07200B29611 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A1B5156BE07200B29611 /* LSMSA-Info.plist */,
+				20B9A1B6156BE07200B29611 /* InfoPlist.strings */,
+				20B9A1B9156BE07200B29611 /* main.m */,
+				20B9A1BB156BE07200B29611 /* LSMSA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20B9A1A8156BE07200B29611 /* LSMSA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20B9A1D5156BE07200B29611 /* Build configuration list for PBXNativeTarget "LSMSA" */;
+			buildPhases = (
+				20B9A1A5156BE07200B29611 /* Sources */,
+				20B9A1A6156BE07200B29611 /* Frameworks */,
+				20B9A1A7156BE07200B29611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LSMSA;
+			productName = LSMSA;
+			productReference = 20B9A1A9156BE07200B29611 /* LSMSA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20B9A1A0156BE07200B29611 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = NewAperio;
+			};
+			buildConfigurationList = 20B9A1A3156BE07200B29611 /* Build configuration list for PBXProject "LSMSA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 20B9A19E156BE07200B29611;
+			productRefGroup = 20B9A1AA156BE07200B29611 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20B9A1A8156BE07200B29611 /* LSMSA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20B9A1A7156BE07200B29611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20B9A1B8156BE07200B29611 /* InfoPlist.strings in Resources */,
+				20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20B9A1A5156BE07200B29611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20B9A1BA156BE07200B29611 /* main.m in Sources */,
+				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20B9A1B6156BE07200B29611 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20B9A1B7156BE07200B29611 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20B9A1C0156BE07200B29611 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20B9A1D3156BE07200B29611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20B9A1D4156BE07200B29611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20B9A1D6156BE07200B29611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LSMSA/LSMSA-Prefix.pch";
+				INFOPLIST_FILE = "LSMSA/LSMSA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		20B9A1D7156BE07200B29611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LSMSA/LSMSA-Prefix.pch";
+				INFOPLIST_FILE = "LSMSA/LSMSA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20B9A1A3156BE07200B29611 /* Build configuration list for PBXProject "LSMSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20B9A1D3156BE07200B29611 /* Debug */,
+				20B9A1D4156BE07200B29611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20B9A1D5156BE07200B29611 /* Build configuration list for PBXNativeTarget "LSMSA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20B9A1D6156BE07200B29611 /* Debug */,
+				20B9A1D7156BE07200B29611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20B9A1A0156BE07200B29611 /* Project object */;
+}
