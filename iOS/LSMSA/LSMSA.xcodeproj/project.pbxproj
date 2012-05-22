@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1811F6C3156C29E0000CF478 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811F6C2156C29E0000CF478 /* CFNetwork.framework */; };
 		18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665D98156BE67E000A9740 /* NewsTableController.m */; };
-		18665DA6156BEE47000A9740 /* FacebookPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665DA5156BEE47000A9740 /* FacebookPhotoModel.m */; };
-		18665DD3156BF748000A9740 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DC8156BF63A000A9740 /* libRestKit.a */; };
+		18665DA6156BEE47000A9740 /* FacebookStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665DA5156BEE47000A9740 /* FacebookStatusModel.m */; };
+		18665DD3156BF748000A9740 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DC8156BF63A000A9740 /* libRestKit.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		18665DDA156BF7CC000A9740 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD4156BF7CC000A9740 /* CoreData.framework */; };
 		18665DDB156BF7CC000A9740 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD5156BF7CC000A9740 /* libxml2.dylib */; };
 		18665DDC156BF7CC000A9740 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD6156BF7CC000A9740 /* MobileCoreServices.framework */; };
@@ -72,10 +73,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1811F6C2156C29E0000CF478 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		18665D97156BE67E000A9740 /* NewsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableController.h; sourceTree = "<group>"; };
 		18665D98156BE67E000A9740 /* NewsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableController.m; sourceTree = "<group>"; };
-		18665DA4156BEE47000A9740 /* FacebookPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookPhotoModel.h; sourceTree = "<group>"; };
-		18665DA5156BEE47000A9740 /* FacebookPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookPhotoModel.m; sourceTree = "<group>"; };
+		18665DA4156BEE47000A9740 /* FacebookStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookStatusModel.h; sourceTree = "<group>"; };
+		18665DA5156BEE47000A9740 /* FacebookStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStatusModel.m; sourceTree = "<group>"; };
 		18665DBC156BF63A000A9740 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = LSMSA/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		18665DD4156BF7CC000A9740 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		18665DD5156BF7CC000A9740 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1811F6C3156C29E0000CF478 /* CFNetwork.framework in Frameworks */,
 				18665DDA156BF7CC000A9740 /* CoreData.framework in Frameworks */,
 				18665DDB156BF7CC000A9740 /* libxml2.dylib in Frameworks */,
 				18665DDC156BF7CC000A9740 /* MobileCoreServices.framework in Frameworks */,
@@ -122,8 +125,8 @@
 		18665DA2156BED93000A9740 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				18665DA4156BEE47000A9740 /* FacebookPhotoModel.h */,
-				18665DA5156BEE47000A9740 /* FacebookPhotoModel.m */,
+				18665DA4156BEE47000A9740 /* FacebookStatusModel.h */,
+				18665DA5156BEE47000A9740 /* FacebookStatusModel.m */,
 				187BEB8C156C1B9B006810C5 /* TwitterModel.h */,
 				187BEB8D156C1B9B006810C5 /* TwitterModel.m */,
 			);
@@ -145,6 +148,7 @@
 		20B9A19E156BE07200B29611 = {
 			isa = PBXGroup;
 			children = (
+				1811F6C2156C29E0000CF478 /* CFNetwork.framework */,
 				18665DD4156BF7CC000A9740 /* CoreData.framework */,
 				18665DD5156BF7CC000A9740 /* libxml2.dylib */,
 				18665DD6156BF7CC000A9740 /* MobileCoreServices.framework */,
@@ -179,11 +183,11 @@
 		20B9A1B3156BE07200B29611 /* LSMSA */ = {
 			isa = PBXGroup;
 			children = (
+				20B9A1B4156BE07200B29611 /* Supporting Files */,
 				18665DA2156BED93000A9740 /* Models */,
 				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
 				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
-				20B9A1B4156BE07200B29611 /* Supporting Files */,
 				18665D97156BE67E000A9740 /* NewsTableController.h */,
 				18665D98156BE67E000A9740 /* NewsTableController.m */,
 			);
@@ -312,7 +316,7 @@
 				20B9A1BA156BE07200B29611 /* main.m in Sources */,
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
 				18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */,
-				18665DA6156BEE47000A9740 /* FacebookPhotoModel.m in Sources */,
+				18665DA6156BEE47000A9740 /* FacebookStatusModel.m in Sources */,
 				187BEB8E156C1B9B006810C5 /* TwitterModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,7 +405,10 @@
 				GCC_PREFIX_HEADER = "LSMSA/LSMSA-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "LSMSA/LSMSA-Info.plist";
-				OTHER_LDFLAGS = "-objC";
+				OTHER_LDFLAGS = (
+					"-objC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,7 +421,10 @@
 				GCC_PREFIX_HEADER = "LSMSA/LSMSA-Prefix.pch";
 				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "LSMSA/LSMSA-Info.plist";
-				OTHER_LDFLAGS = "-objC";
+				OTHER_LDFLAGS = (
+					"-objC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

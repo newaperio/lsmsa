@@ -1,7 +1,7 @@
 <%- model_class = @prospy.class -%>
 <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 
-<dl class="dl-horizontal">
+<div class="container"><dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @prospy.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
@@ -15,10 +15,10 @@
   <dt><strong><%= model_class.human_attribute_name(:high_school) %>:</strong></dt>
   <dd><%= @prospy.high_school %></dd>
   <dt><strong><%= model_class.human_attribute_name(:concentration_id) %>:</strong></dt>
-  <dd><%= @prospy.concentration_id %></dd>
+  <dd><%= Concentration.find(@prospy.concentration_id).name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:year_id) %>:</strong></dt>
   <dd><%= @prospy.year_id %></dd>
-</dl>
+</dl></div>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
