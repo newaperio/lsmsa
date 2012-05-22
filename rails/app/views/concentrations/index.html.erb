@@ -1,23 +1,32 @@
-<h1>Listing concentrations</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @concentrations.each do |concentration| %>
-  <tr>
-    <td><%= concentration.name %></td>
-    <td><%= link_to 'Show', concentration %></td>
-    <td><%= link_to 'Edit', edit_concentration_path(concentration) %></td>
-    <td><%= link_to 'Destroy', concentration, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<%- model_class = Concentration.new.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @concentrations.each do |concentration| %>
+      <tr>
+        <td><%= link_to concentration.id, concentration_path(concentration) %></td>
+        <td><%= link_to concentration.name, concentration_path(concentration) %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_concentration_path(concentration), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      concentration_path(concentration),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Concentration', new_concentration_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_concentration_path,
+            :class => 'btn btn-primary' %>

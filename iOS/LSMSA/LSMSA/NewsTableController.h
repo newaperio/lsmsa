@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/Restkit.h>
+#import "FacebookStatusModel.h"
 
 @interface NewsTableController : UIViewController
 

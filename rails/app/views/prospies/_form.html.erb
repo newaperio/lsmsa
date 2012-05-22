@@ -12,9 +12,15 @@
     </div>
   </div>
   <div class="control-group">
-    <%= f.label :address, :class => 'control-label' %>
+    <%= f.label :address_line_1, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :address, :class => 'text_field' %>
+      <%= f.text_field :address_1, :class => 'text_field' %>
+    </div>
+  </div>
+    <div class="control-group">
+    <%= f.label :address_line_2, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address_2, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -32,7 +38,7 @@
   <div class="control-group">
     <%= f.label :concentration_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :concentration_id, :class => 'number_field' %>
+      <%= f.select :concentration_id, Concentration.all.collect {|c| [c.name, c.id]} %>
     </div>
   </div>
   <div class="control-group">
@@ -46,5 +52,6 @@
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 prospies_path, :class => 'btn' %>
+                t.strftime("Printed on %m/%d/%Y")
   </div>
 <% end %>
