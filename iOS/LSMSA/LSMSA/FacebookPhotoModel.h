@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Restkit/Restkit.h>
 
 @interface FacebookPhotoModel : NSObject
 
