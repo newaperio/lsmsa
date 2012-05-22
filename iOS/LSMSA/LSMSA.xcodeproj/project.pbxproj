@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665D98156BE67E000A9740 /* NewsTableController.m */; };
+		18665DA6156BEE47000A9740 /* FacebookPhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665DA5156BEE47000A9740 /* FacebookPhotoModel.m */; };
 		20B9A1AE156BE07200B29611 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AD156BE07200B29611 /* UIKit.framework */; };
 		20B9A1B0156BE07200B29611 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AF156BE07200B29611 /* Foundation.framework */; };
 		20B9A1B2156BE07200B29611 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1B1156BE07200B29611 /* CoreGraphics.framework */; };
@@ -20,6 +21,8 @@
 /* Begin PBXFileReference section */
 		18665D97156BE67E000A9740 /* NewsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableController.h; sourceTree = "<group>"; };
 		18665D98156BE67E000A9740 /* NewsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableController.m; sourceTree = "<group>"; };
+		18665DA4156BEE47000A9740 /* FacebookPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookPhotoModel.h; sourceTree = "<group>"; };
+		18665DA5156BEE47000A9740 /* FacebookPhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookPhotoModel.m; sourceTree = "<group>"; };
 		20B9A1A9156BE07200B29611 /* LSMSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSMSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B9A1AD156BE07200B29611 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20B9A1AF156BE07200B29611 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +50,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18665DA2156BED93000A9740 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18665DA4156BEE47000A9740 /* FacebookPhotoModel.h */,
+				18665DA5156BEE47000A9740 /* FacebookPhotoModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		20B9A19E156BE07200B29611 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 		20B9A1B3156BE07200B29611 /* LSMSA */ = {
 			isa = PBXGroup;
 			children = (
+				18665DA2156BED93000A9740 /* Models */,
 				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
 				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
@@ -164,6 +177,7 @@
 				20B9A1BA156BE07200B29611 /* main.m in Sources */,
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
 				18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */,
+				18665DA6156BEE47000A9740 /* FacebookPhotoModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
