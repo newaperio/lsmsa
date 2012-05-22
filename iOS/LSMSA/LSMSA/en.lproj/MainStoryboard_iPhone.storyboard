@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -36,7 +36,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="64a-wo-ARh"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="519" y="-389"/>
+            <point key="canvasLocation" x="1001" y="180"/>
         </scene>
         <scene sceneID="bUV-li-2AY">
             <objects>
@@ -65,7 +65,7 @@
                     <tabBarItem key="tabBarItem" title="News" id="0uj-rB-bLv"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="519" y="180"/>
+            <point key="canvasLocation" x="1001" y="-408"/>
         </scene>
         <scene sceneID="UQ0-3z-fBK">
             <objects>
@@ -79,7 +79,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="GSN-PO-D8O"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="519" y="776"/>
+            <point key="canvasLocation" x="1001" y="764"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
