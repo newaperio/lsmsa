@@ -16,6 +16,7 @@
 		18665DDD156BF7CC000A9740 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD7156BF7CC000A9740 /* QuartzCore.framework */; };
 		18665DDE156BF7CC000A9740 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD8156BF7CC000A9740 /* Security.framework */; };
 		18665DDF156BF7CC000A9740 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD9156BF7CC000A9740 /* SystemConfiguration.framework */; };
+		187BEB8E156C1B9B006810C5 /* TwitterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BEB8D156C1B9B006810C5 /* TwitterModel.m */; };
 		20B9A1AE156BE07200B29611 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AD156BE07200B29611 /* UIKit.framework */; };
 		20B9A1B0156BE07200B29611 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AF156BE07200B29611 /* Foundation.framework */; };
 		20B9A1B2156BE07200B29611 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1B1156BE07200B29611 /* CoreGraphics.framework */; };
@@ -82,6 +83,8 @@
 		18665DD7156BF7CC000A9740 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		18665DD8156BF7CC000A9740 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		18665DD9156BF7CC000A9740 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		187BEB8C156C1B9B006810C5 /* TwitterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterModel.h; sourceTree = "<group>"; };
+		187BEB8D156C1B9B006810C5 /* TwitterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterModel.m; sourceTree = "<group>"; };
 		20B9A1A9156BE07200B29611 /* LSMSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSMSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B9A1AD156BE07200B29611 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20B9A1AF156BE07200B29611 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +124,8 @@
 			children = (
 				18665DA4156BEE47000A9740 /* FacebookPhotoModel.h */,
 				18665DA5156BEE47000A9740 /* FacebookPhotoModel.m */,
+				187BEB8C156C1B9B006810C5 /* TwitterModel.h */,
+				187BEB8D156C1B9B006810C5 /* TwitterModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
 				18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */,
 				18665DA6156BEE47000A9740 /* FacebookPhotoModel.m in Sources */,
+				187BEB8E156C1B9B006810C5 /* TwitterModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

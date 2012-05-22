@@ -7,6 +7,29 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">LSMSA Interest Tracker</a>
+      <div class="nav-collapse">
+       <ul class="nav">
+  		<li class="active">
+    		<%= link_to "Home", root_path %>
+  		</li>
+  		<li><%= link_to "Prospective Students", prospies_path %></li>
+  		<li><%= link_to "Concentrations", concentrations_path %></li>
+  		<li><%= link_to "Graduation Year", years_path %></li>
+</ul>
+      </div>
+    </div>
+  </div>
+</div>
 <%= yield %>
 </body>
 </html>

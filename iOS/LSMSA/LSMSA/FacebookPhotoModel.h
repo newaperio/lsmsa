@@ -12,5 +12,4 @@
 @interface FacebookPhotoModel : NSObject
 
 
-
 @end

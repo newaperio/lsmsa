@@ -1,12 +1,13 @@
 <%- model_class = Prospy.new.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<h1>Prospective Students</h1>
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
-      <th><%= model_class.human_attribute_name(:address) %></th>
+      <th><%= model_class.human_attribute_name(:address_1) %></th>
+	  <th><%= model_class.human_attribute_name(:address_2) %></th>
       <th><%= model_class.human_attribute_name(:interest) %></th>
       <th><%= model_class.human_attribute_name(:high_school) %></th>
       <th><%= model_class.human_attribute_name(:concentration_id) %></th>
@@ -21,7 +22,8 @@
         <td><%= link_to prospy.id, prospy_path(prospy) %></td>
         <td><%= prospy.name %></td>
         <td><%= prospy.email %></td>
-        <td><%= prospy.address %></td>
+        <td><%= prospy.address_1 %></td>
+        <td><%= prospy.address_2 %></td>
         <td><%= prospy.interest %></td>
         <td><%= prospy.high_school %></td>
         <td><%= prospy.concentration_id %></td>
