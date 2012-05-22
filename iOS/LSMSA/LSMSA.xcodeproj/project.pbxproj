@@ -174,11 +174,11 @@
 		20B9A1B3156BE07200B29611 /* LSMSA */ = {
 			isa = PBXGroup;
 			children = (
+				20B9A1B4156BE07200B29611 /* Supporting Files */,
 				18665DA2156BED93000A9740 /* Models */,
 				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
 				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
-				20B9A1B4156BE07200B29611 /* Supporting Files */,
 				18665D97156BE67E000A9740 /* NewsTableController.h */,
 				18665D98156BE67E000A9740 /* NewsTableController.m */,
 			);
