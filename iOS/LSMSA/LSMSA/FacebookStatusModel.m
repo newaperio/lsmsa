@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 NewAperio. All rights reserved.
 //
 
-#import "FacebookPhotoModel.h"
+#import "FacebookStatusModel.h"
 
-@implementation FacebookPhotoModel
+@implementation FacebookStatusModel
 
 @synthesize Message = _Message, ImageURL = _ImageURL, DateCreated = _DateCreated;
 
