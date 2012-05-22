@@ -1,3 +1,5 @@
+require 'csv'
+
 class ProspiesController < ApplicationController
   # GET /prospies
   # GET /prospies.json
@@ -53,7 +55,6 @@ class ProspiesController < ApplicationController
       end
     end
   end
-
   # PUT /prospies/1
   # PUT /prospies/1.json
   def update
@@ -81,4 +82,10 @@ class ProspiesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def export 
+  @prospy = Prospy.find(:all)
+  csv_string = CSV.generate do |csv|
+  csv << ["email"]
+  end
 end
+
