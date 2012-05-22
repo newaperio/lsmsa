@@ -14,7 +14,7 @@
 /rails/log/*.log
 /rails/tmp
 
-.DS_Store
+/.DS_Store
 /*/**/.DS_Store
 /iOS/.DS_Store
 /iOS/*.swp
