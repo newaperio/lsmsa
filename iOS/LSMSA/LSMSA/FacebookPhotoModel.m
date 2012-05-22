@@ -10,4 +10,6 @@
 
 @implementation FacebookPhotoModel
 
+@synthesize Message = _Message, ImageURL = _ImageURL, DateCreated = _DateCreated;
+
 @end
