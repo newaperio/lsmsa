@@ -32,6 +32,31 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="gzd-5w-j0R">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="KFa-Qg-a1f">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="zuQ-9v-cD5">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="OT8-T6-RTa">
+                                                <rect key="frame" x="297" y="12" width="18" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Aoj-Ab-7Gb" kind="modal" identifier="secondTabToAboutSegue" modalTransitionStyle="crossDissolve" id="gEz-rn-pOf"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" id="cIO-TV-Vzk">
                                 <rect key="frame" x="20" y="20" width="280" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -97,10 +122,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Interest" id="64a-wo-ARh"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="64a-wo-ARh"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="519" y="-400"/>
+            <point key="canvasLocation" x="1001" y="180"/>
         </scene>
         <scene sceneID="3V6-lR-Ygn">
             <objects>
@@ -161,7 +186,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="519" y="180"/>
+            <point key="canvasLocation" x="1001" y="-408"/>
         </scene>
         <scene sceneID="UQ0-3z-fBK">
             <objects>
@@ -202,7 +227,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="GSN-PO-D8O"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="519" y="776"/>
+            <point key="canvasLocation" x="1001" y="764"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
