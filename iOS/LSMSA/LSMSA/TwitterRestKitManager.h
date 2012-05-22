@@ -1,5 +1,5 @@
 //
-//  FacebookPhotoModel.h
+//  TwitterRestKitManager.h
 //  LSMSA
 //
 //  Created by Apple on 5/22/12.
@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Restkit/Restkit.h>
 
-@interface FacebookPhotoModel : NSObject
-
+@interface TwitterRestKitManager : NSObject
 
 @end
