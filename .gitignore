@@ -5,11 +5,28 @@
 #   git config --global core.excludesfile ~/.gitignore_global
 
 # Ignore bundler config
-/.bundle
+/lsmsa/.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
+/lsmsa/db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
+/lsmsa/log/*.log
+/lsmsa/tmp
+
+iOS/.DS_Store
+iOS/*.swp
+iOS/*~.nib
+
+iOS/build/
+
+iOS/*.pbxuser
+iOS/*.perspective
+iOS/*.perspectivev3
+
+iOS/*.mode1v3
+iOS/*.mode2v3
+
+iOS/xcuserdata
+
+iOS/.xcodeproj/ !*.xcodeproj/project.pbxproj
