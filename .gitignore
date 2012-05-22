@@ -12,7 +12,7 @@
 
 # Ignore all logfiles and tempfiles.
 /rails/log/*.log
-/rails/tmp
+/rails/tmp/*/**
 
 /.DS_Store
 /*/**/.DS_Store
