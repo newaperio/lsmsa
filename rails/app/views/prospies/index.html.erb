@@ -1,31 +1,46 @@
-<h1>Listing prospies</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Address</th>
-    <th>Interest</th>
-    <th>High school</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @prospies.each do |prospy| %>
-  <tr>
-    <td><%= prospy.name %></td>
-    <td><%= prospy.email %></td>
-    <td><%= prospy.address %></td>
-    <td><%= prospy.interest %></td>
-    <td><%= prospy.high_school %></td>
-    <td><%= link_to 'Show', prospy %></td>
-    <td><%= link_to 'Edit', edit_prospy_path(prospy) %></td>
-    <td><%= link_to 'Destroy', prospy, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+<%- model_class = Prospy.new.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:address) %></th>
+      <th><%= model_class.human_attribute_name(:interest) %></th>
+      <th><%= model_class.human_attribute_name(:high_school) %></th>
+      <th><%= model_class.human_attribute_name(:concentration_id) %></th>
+      <th><%= model_class.human_attribute_name(:year_id) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @prospies.each do |prospy| %>
+      <tr>
+        <td><%= link_to prospy.id, prospy_path(prospy) %></td>
+        <td><%= prospy.name %></td>
+        <td><%= prospy.email %></td>
+        <td><%= prospy.address %></td>
+        <td><%= prospy.interest %></td>
+        <td><%= prospy.high_school %></td>
+        <td><%= prospy.concentration_id %></td>
+        <td><%= prospy.year_id %></td>
+        <td><%=l prospy.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_prospy_path(prospy), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      prospy_path(prospy),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
-<br />
-
-<%= link_to 'New Prospy', new_prospy_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_prospy_path,
+            :class => 'btn btn-primary' %>
