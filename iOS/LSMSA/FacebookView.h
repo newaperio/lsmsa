@@ -15,3 +15,4 @@
 @property (nonatomic, retain) IBOutlet UILabel *statusText;
 
 @end
+
