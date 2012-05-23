@@ -186,7 +186,7 @@
         <scene sceneID="bUV-li-2AY">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ol6-OI-dxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="eua-YF-sm3" sceneMemberID="viewController">
+                <tableViewController id="eua-YF-sm3" customClass="NewsTableController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gd8-kR-vdm">
                         <rect key="frame" x="0.0" y="20" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,6 +306,8 @@
             <relationships>
                 <relationship kind="action" name="sendPressed:"/>
             </relationships>
+        <class className="NewsTableController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsTableController.h"/>
         </class>
         <class className="TwitterView" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterView.h"/>

@@ -18,6 +18,7 @@
     //NSMutableArray* _scoop; -- we are probably going to drop the source "Inside Scoop" because it gives us no XML and bad HTML. (its html 4.0)
 }
 
--(void)TestInfo;
-
+-(void)testInfo;
+-(void) loadTwitterContent;
+-(void) loadFacebookContent;
 @end
