@@ -33,6 +33,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    NSLog(@"Got to it!");
     
     RKObjectManager* facebookObjectManager = [RKObjectManager objectManagerWithBaseURL:[NSURL URLWithString:@"https://graph.facebook.com/LSMSA/feed?access_token=229258737190118%7Cd_25JuHSsUdI2hw12QlfH1DSXdg"]];
     RKObjectMapping* statusMapping = [RKObjectMapping mappingForClass:[FacebookStatus class]];
@@ -46,7 +47,7 @@
     RKObjectMapping* tweetMapping = [RKObjectMapping mappingForClass:[Tweet class]];
     [tweetMapping mapKeyPath:@"text" toAttribute:@"textBody"];
     [tweetMapping mapKeyPath:@"created_at" toAttribute:@"dateCreated"];
-    [twitterObjectManager.mappingProvider setMapping:statusMapping forKeyPath:@""];
+    [twitterObjectManager.mappingProvider setMapping:tweetMapping forKeyPath:@""];
     [twitterObjectManager loadObjectsAtResourcePath:@"" delegate:self];
     
 }
@@ -65,6 +66,7 @@
 }
 
 -(void)objectLoader: (RKObjectLoader*)objectLoader didLoadObjects:(NSArray *)objects{
+    NSLog(@"%@", objects.description);
     
 }
 

@@ -10,9 +10,8 @@
 #import <RestKit/Restkit.h>
 #import "FacebookStatus.h"
 #import "Tweet.h"
-#import "Scoop.h"
 
-@interface NewsTableController : UIViewController <RKObjectLoaderDelegate>
+@interface NewsTableController : UITableViewController <RKObjectLoaderDelegate>
 {
     NSMutableArray* _tweets;
     NSMutableArray* _facebookStatuses;
