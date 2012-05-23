@@ -6,10 +6,18 @@
   <dd><%= @prospy.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
   <dd><%= @prospy.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:telephone_number) %>:</strong></dt>
+  <dd><%= @prospy.telephone_number %></dd>
   <dt><strong><%= model_class.human_attribute_name(:address_1) %>:</strong></dt>
   <dd><%= @prospy.address_1 %></dd>
   <dt><strong><%= model_class.human_attribute_name(:address_2) %>:</strong></dt>
-  <dd><%= @prospy.address_2 %></dd>
+  <dd><%= @prospy.address_2 %>&nbsp;</dd>
+  <dt><strong>City:</strong></dt>
+  <dd><%= @prospy.cities %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
+  <dd><%= @prospy.state %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
+  <dd><%= @prospy.zip %></dd>
   <dt><strong><%= model_class.human_attribute_name(:interest) %>:</strong></dt>
   <dd><%= @prospy.interest %></dd>
   <dt><strong><%= model_class.human_attribute_name(:high_school) %>:</strong></dt>
