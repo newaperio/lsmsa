@@ -11,6 +11,6 @@
 @interface Tweet : NSObject
 
 @property (nonatomic, retain) NSString* textBody;
-@property (nonatomic, retain) NSDate* dateCreated;
+@property (nonatomic, retain) NSString* dateCreated;
 
 @end

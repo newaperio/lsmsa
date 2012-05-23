@@ -23,7 +23,7 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+    [self TestInfo];
     // Release any cached data, images, etc that aren't in use.
 }
 
@@ -66,8 +66,24 @@
 }
 
 -(void)objectLoader: (RKObjectLoader*)objectLoader didLoadObjects:(NSArray *)objects{
-    NSLog(@"%@", objects.description);
+    if([[NSString stringWithFormat:@"%@", [[objects objectAtIndex:0] class]] isEqualToString: @"FacebookStatus"])
+        _facebookStatuses = objects;
+    if([[NSString stringWithFormat:@"%@", [[objects objectAtIndex:0] class]] isEqualToString: @"Tweet"])
+        _tweets = objects;
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+}
+
+-(void)TestInfo
+{
+    NSLog(@"got it 2.0");
+    for (int i = 0; i < [_facebookStatuses count]; i ++)
+        NSLog(@"%@",[_facebookStatuses objectAtIndex:i]);
     
+    for (int i = 0; i < [_tweets count]; i ++)
+        NSLog(@"%@",[_tweets objectAtIndex:i]);
 }
 
 @end
