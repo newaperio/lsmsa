@@ -1,0 +1,919 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>RKManagedObjectStore Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.5 (build 789)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">RestKit </a></h1>
+				<a id="developerHome" href="../index.html">RestKit</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">RKManagedObjectStore Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/cacheStrategy">&nbsp;&nbsp;&nbsp;&nbsp;cacheStrategy</option>
+	
+	<option value="//api/name/primaryManagedObjectContext">&nbsp;&nbsp;&nbsp;&nbsp;primaryManagedObjectContext</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/deleteStoreAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;+ deleteStoreAtPath:</option>
+	
+	<option value="//api/name/deleteStoreInApplicationDataDirectoryWithFilename:">&nbsp;&nbsp;&nbsp;&nbsp;+ deleteStoreInApplicationDataDirectoryWithFilename:</option>
+	
+	<option value="//api/name/objectStoreWithStoreFilename:">&nbsp;&nbsp;&nbsp;&nbsp;+ objectStoreWithStoreFilename:</option>
+	
+	<option value="//api/name/objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:</option>
+	
+	<option value="//api/name/objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/deletePersistentStoreUsingSeedDatabaseName:">&nbsp;&nbsp;&nbsp;&nbsp;- deletePersistentStoreUsingSeedDatabaseName:</option>
+	
+	<option value="//api/name/initWithStoreFilename:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithStoreFilename:</option>
+	
+	<option value="//api/name/newManagedObjectContext">&nbsp;&nbsp;&nbsp;&nbsp;- newManagedObjectContext</option>
+	
+	<option value="//api/name/objectWithID:">&nbsp;&nbsp;&nbsp;&nbsp;- objectWithID:</option>
+	
+	<option value="//api/name/objectsWithIDs:">&nbsp;&nbsp;&nbsp;&nbsp;- objectsWithIDs:</option>
+	
+	<option value="//api/name/save:">&nbsp;&nbsp;&nbsp;&nbsp;- save:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Deleting Store Files">Deleting Store Files</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initializing an Object Store">Initializing an Object Store</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Retrieving Managed Object Contexts">Retrieving Managed Object Contexts</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cacheStrategy">cacheStrategy</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/primaryManagedObjectContext">primaryManagedObjectContext</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteStoreAtPath:">deleteStoreAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deleteStoreInApplicationDataDirectoryWithFilename:">deleteStoreInApplicationDataDirectoryWithFilename:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectStoreWithStoreFilename:">objectStoreWithStoreFilename:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:">objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:">objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deletePersistentStoreUsingSeedDatabaseName:">deletePersistentStoreUsingSeedDatabaseName:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithStoreFilename:">initWithStoreFilename:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/newManagedObjectContext">newManagedObjectContext</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectWithID:">objectWithID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/objectsWithIDs:">objectsWithIDs:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/save:">save:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="RKManagedObjectStore Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">RKManagedObjectStore Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">RKManagedObjectStore.h<br />RKManagedObjectStore.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Deleting Store Files" name="task_Deleting Store Files"></a>
+						<h3 class="subsubtitle task-title">Deleting Store Files</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deleteStoreAtPath:">+&nbsp;deleteStoreAtPath:</a></code>
+		<span class="tooltip"><p>Deletes the SQLite file backing an RKManagedObjectStore instance at a given path.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deleteStoreInApplicationDataDirectoryWithFilename:">+&nbsp;deleteStoreInApplicationDataDirectoryWithFilename:</a></code>
+		<span class="tooltip"><p>Deletes the SQLite file backing an RKManagedObjectStore instance with a given
+filename within the application data directory.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Initializing an Object Store" name="task_Initializing an Object Store"></a>
+						<h3 class="subsubtitle task-title">Initializing an Object Store</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cacheStrategy">&nbsp;&nbsp;cacheStrategy</a></code>
+		
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectStoreWithStoreFilename:">+&nbsp;objectStoreWithStoreFilename:</a></code>
+		<span class="tooltip"><p>Initialize a new managed object store with a SQLite database with the filename specified</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:">+&nbsp;objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:</a></code>
+		<span class="tooltip"><p>Initialize a new managed object store backed by a SQLite database with the specified filename.
+If a seed database name is provided and no existing database is found, initialize the store by
+copying the seed database from the main bundle. If the managed object model provided is nil,
+all models will be merged from the main bundle for you.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:">+&nbsp;objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:</a></code>
+		<span class="tooltip"><p>Initialize a new managed object store backed by a SQLite database with the specified filename,
+in the specified directory. If no directory is specified, will use the app&rsquo;s Documents
+directory. If a seed database name is provided and no existing database is found, initialize
+the store by copying the seed database from the main bundle. If the managed object model
+provided is nil, all models will be merged from the main bundle for you.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithStoreFilename:">&ndash;&nbsp;initWithStoreFilename:</a></code>
+		<span class="tooltip"><p>Initialize a new managed object store with a SQLite database with the filename specified
+@deprecated</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/save:">&ndash;&nbsp;save:</a></code>
+		<span class="tooltip"><p>Save the current contents of the managed object store</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deletePersistentStoreUsingSeedDatabaseName:">&ndash;&nbsp;deletePersistentStoreUsingSeedDatabaseName:</a></code>
+		<span class="tooltip"><p>This deletes and recreates the managed object context and
+persistent store, effectively clearing all data</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectWithID:">&ndash;&nbsp;objectWithID:</a></code>
+		<span class="tooltip"><p>Retrieves a model object from the appropriate context using the objectId</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/objectsWithIDs:">&ndash;&nbsp;objectsWithIDs:</a></code>
+		<span class="tooltip"><p>Retrieves a array of model objects from the appropriate context using
+an array of NSManagedObjectIDs</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Retrieving Managed Object Contexts" name="task_Retrieving Managed Object Contexts"></a>
+						<h3 class="subsubtitle task-title">Retrieving Managed Object Contexts</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/primaryManagedObjectContext">&nbsp;&nbsp;primaryManagedObjectContext</a></code>
+		<span class="tooltip"><p>Retrieves the Managed Object Context for the main thread that was initialized when
+the object store was created.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/newManagedObjectContext">&ndash;&nbsp;newManagedObjectContext</a></code>
+		<span class="tooltip"><p>Instantiates a new managed object context</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cacheStrategy" title="cacheStrategy"></a>
+	<h3 class="subsubtitle method-title">cacheStrategy</h3>
+	
+	
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSObject&lt;RKManagedObjectCaching&gt; *cacheStrategy</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/primaryManagedObjectContext" title="primaryManagedObjectContext"></a>
+	<h3 class="subsubtitle method-title">primaryManagedObjectContext</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves the Managed Object Context for the main thread that was initialized when
+the object store was created.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) NSManagedObjectContext *primaryManagedObjectContext</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/deleteStoreAtPath:" title="deleteStoreAtPath:"></a>
+	<h3 class="subsubtitle method-title">deleteStoreAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deletes the SQLite file backing an RKManagedObjectStore instance at a given path.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)deleteStoreAtPath:(NSString *)<em>path</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>The complete path to the store file to delete.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deleteStoreInApplicationDataDirectoryWithFilename:" title="deleteStoreInApplicationDataDirectoryWithFilename:"></a>
+	<h3 class="subsubtitle method-title">deleteStoreInApplicationDataDirectoryWithFilename:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deletes the SQLite file backing an RKManagedObjectStore instance with a given
+filename within the application data directory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (void)deleteStoreInApplicationDataDirectoryWithFilename:(NSString *)<em>filename</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>filename</em></dt>
+			<dd><p>The name of the file within the application data directory backing a managed object store.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectStoreWithStoreFilename:" title="objectStoreWithStoreFilename:"></a>
+	<h3 class="subsubtitle method-title">objectStoreWithStoreFilename:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize a new managed object store with a SQLite database with the filename specified</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (RKManagedObjectStore *)objectStoreWithStoreFilename:(NSString *)<em>storeFilename</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:" title="objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:"></a>
+	<h3 class="subsubtitle method-title">objectStoreWithStoreFilename:inDirectory:usingSeedDatabaseName:managedObjectModel:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize a new managed object store backed by a SQLite database with the specified filename,
+in the specified directory. If no directory is specified, will use the app&rsquo;s Documents
+directory. If a seed database name is provided and no existing database is found, initialize
+the store by copying the seed database from the main bundle. If the managed object model
+provided is nil, all models will be merged from the main bundle for you.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (RKManagedObjectStore *)objectStoreWithStoreFilename:(NSString *)<em>storeFilename</em> inDirectory:(NSString *)<em>directory</em> usingSeedDatabaseName:(NSString *)<em>nilOrNameOfSeedDatabaseInMainBundle</em> managedObjectModel:(NSManagedObjectModel *)<em>nilOrManagedObjectModel</em> delegate:(id)<em>delegate</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:" title="objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:"></a>
+	<h3 class="subsubtitle method-title">objectStoreWithStoreFilename:usingSeedDatabaseName:managedObjectModel:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize a new managed object store backed by a SQLite database with the specified filename.
+If a seed database name is provided and no existing database is found, initialize the store by
+copying the seed database from the main bundle. If the managed object model provided is nil,
+all models will be merged from the main bundle for you.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (RKManagedObjectStore *)objectStoreWithStoreFilename:(NSString *)<em>storeFilename</em> usingSeedDatabaseName:(NSString *)<em>nilOrNameOfSeedDatabaseInMainBundle</em> managedObjectModel:(NSManagedObjectModel *)<em>nilOrManagedObjectModel</em> delegate:(id)<em>delegate</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/deletePersistentStoreUsingSeedDatabaseName:" title="deletePersistentStoreUsingSeedDatabaseName:"></a>
+	<h3 class="subsubtitle method-title">deletePersistentStoreUsingSeedDatabaseName:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>This deletes and recreates the managed object context and
+persistent store, effectively clearing all data</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)deletePersistentStoreUsingSeedDatabaseName:(NSString *)<em>seedFile</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithStoreFilename:" title="initWithStoreFilename:"></a>
+	<h3 class="subsubtitle method-title">initWithStoreFilename:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize a new managed object store with a SQLite database with the filename specified
+@deprecated</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (id)initWithStoreFilename:(NSString *)<em>storeFilename</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/newManagedObjectContext" title="newManagedObjectContext"></a>
+	<h3 class="subsubtitle method-title">newManagedObjectContext</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Instantiates a new managed object context</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSManagedObjectContext *)newManagedObjectContext</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectWithID:" title="objectWithID:"></a>
+	<h3 class="subsubtitle method-title">objectWithID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves a model object from the appropriate context using the objectId</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSManagedObject *)objectWithID:(NSManagedObjectID *)<em>objectID</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/objectsWithIDs:" title="objectsWithIDs:"></a>
+	<h3 class="subsubtitle method-title">objectsWithIDs:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves a array of model objects from the appropriate context using
+an array of NSManagedObjectIDs</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)objectsWithIDs:(NSArray *)<em>objectIDs</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/save:" title="save:"></a>
+	<h3 class="subsubtitle method-title">save:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Save the current contents of the managed object store</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)save:(NSError **)<em>error</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">RKManagedObjectStore.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2012 RestKit. All rights reserved. (Last updated: 2012-05-23)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 789)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+
+		</script>
+	</body>
+</html>
