@@ -82,16 +82,11 @@ class ProspiesController < ApplicationController
   end
   
   def export
-  	@prospies = Prospy.all
-  	
-  	csv = CSV.generate(:force_quotes => true) do |line|
-  		line << ["Email"]
-  		line << @prospies.map { |prospies| prospies.to_csv }.flatten 
-  	end 
-  	
-  	send_data csv,
-      :type => 'text/csv; charset=iso-8859-1; header=present',
-      :disposition => "attachment; filename=prospies-#{Time.now.strftime('%d-%m-%y--%H-%M')}.csv"
+  	@prospies = Prospy.all{|c| lines.push ["#{c.email}"]}
+	csv_string = @prospies 
+	respond_to do |format|
+  		format.csv { send_data(csv_string, :filename => "prospy.csv", :type => "text/csv") }
+	end
   end
    
    helper_method :sort_column, :sort_direction
