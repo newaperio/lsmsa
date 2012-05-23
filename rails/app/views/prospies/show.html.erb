@@ -16,8 +16,6 @@
   <dd><%= @prospy.high_school %></dd>
   <dt><strong><%= model_class.human_attribute_name(:concentration_id) %>:</strong></dt>
   <dd><%= Concentration.find(@prospy.concentration_id).name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:year_id) %>:</strong></dt>
-  <dd><%= @prospy.year_id %></dd>
 </dl></div>
 
 <div class="form-actions">
