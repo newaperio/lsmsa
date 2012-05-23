@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1811F6C3156C29E0000CF478 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811F6C2156C29E0000CF478 /* CFNetwork.framework */; };
+		184000F5156D2B3600460230 /* FacebookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184000F4156D2B3600460230 /* FacebookView.m */; };
+		184000F8156D2B5800460230 /* TwitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184000F7156D2B5800460230 /* TwitterView.m */; };
 		18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665D98156BE67E000A9740 /* NewsTableController.m */; };
 		18665DA6156BEE47000A9740 /* FacebookStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665DA5156BEE47000A9740 /* FacebookStatus.m */; };
 		18665DD3156BF748000A9740 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DC8156BF63A000A9740 /* libRestKit.a */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -74,6 +76,10 @@
 
 /* Begin PBXFileReference section */
 		1811F6C2156C29E0000CF478 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		184000F3156D2B3600460230 /* FacebookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookView.h; path = ../FacebookView.h; sourceTree = "<group>"; };
+		184000F4156D2B3600460230 /* FacebookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookView.m; path = ../FacebookView.m; sourceTree = "<group>"; };
+		184000F6156D2B5800460230 /* TwitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterView.h; path = ../TwitterView.h; sourceTree = "<group>"; };
+		184000F7156D2B5800460230 /* TwitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterView.m; path = ../TwitterView.m; sourceTree = "<group>"; };
 		18665D97156BE67E000A9740 /* NewsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableController.h; sourceTree = "<group>"; };
 		18665D98156BE67E000A9740 /* NewsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableController.m; sourceTree = "<group>"; };
 		18665DA4156BEE47000A9740 /* FacebookStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookStatus.h; sourceTree = "<group>"; };
@@ -129,6 +135,10 @@
 				18665DA5156BEE47000A9740 /* FacebookStatus.m */,
 				187BEB8C156C1B9B006810C5 /* Tweet.h */,
 				187BEB8D156C1B9B006810C5 /* Tweet.m */,
+				184000F6156D2B5800460230 /* TwitterView.h */,
+				184000F7156D2B5800460230 /* TwitterView.m */,
+				184000F3156D2B3600460230 /* FacebookView.h */,
+				184000F4156D2B3600460230 /* FacebookView.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -318,6 +328,8 @@
 				18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */,
 				18665DA6156BEE47000A9740 /* FacebookStatus.m in Sources */,
 				187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */,
+				184000F5156D2B3600460230 /* FacebookView.m in Sources */,
+				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
