@@ -140,8 +140,6 @@
 			children = (
 				18665DA4156BEE47000A9740 /* FacebookStatus.h */,
 				18665DA5156BEE47000A9740 /* FacebookStatus.m */,
-				E7C68033156D926D00DD30B6 /* InterestViewController.h */,
-				E7C68034156D926D00DD30B6 /* InterestViewController.m */,
 				187BEB8C156C1B9B006810C5 /* Tweet.h */,
 				187BEB8D156C1B9B006810C5 /* Tweet.m */,
 				184000F6156D2B5800460230 /* TwitterView.h */,
@@ -209,6 +207,8 @@
 				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
 				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
+				E7C68033156D926D00DD30B6 /* InterestViewController.h */,
+				E7C68034156D926D00DD30B6 /* InterestViewController.m */,
 				18665D97156BE67E000A9740 /* NewsTableController.h */,
 				18665D98156BE67E000A9740 /* NewsTableController.m */,
 			);
