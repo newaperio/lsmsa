@@ -93,4 +93,20 @@ class ProspiesController < ApplicationController
       :type => 'text/csv; charset=iso-8859-1; header=present',
       :disposition => "attachment; filename=prospies-#{Time.now.strftime('%d-%m-%y--%H-%M')}.csv"
   end
+   
+   helper_method :sort_column, :sort_direction
+  
+  def index
+  	@prospies = Prospy.order(sort_column + ' ' + sort_direction)
+  end
+  
+  private
+  
+  def sort_column
+ 		Prospy.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+  
+  def sort_direction
+  		%w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 end
