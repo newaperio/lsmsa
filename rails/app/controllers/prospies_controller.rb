@@ -44,7 +44,7 @@ class ProspiesController < ApplicationController
 
     respond_to do |format|
       if @prospy.save
-        InterestedStudent.sending_email(@prospy).deliver
+        ProspyMailer.interest_notification(@prospy).deliver
         format.html { redirect_to @prospy, notice: 'Prospy was successfully created.' }
         format.json { render json: @prospy, status: :created, location: @prospy }
       else
