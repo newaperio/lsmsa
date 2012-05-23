@@ -36,11 +36,18 @@
     
     RKObjectManager* facebookObjectManager = [RKObjectManager objectManagerWithBaseURL:[NSURL URLWithString:@"https://graph.facebook.com/LSMSA/feed?access_token=229258737190118%7Cd_25JuHSsUdI2hw12QlfH1DSXdg"]];
     RKObjectMapping* statusMapping = [RKObjectMapping mappingForClass:[FacebookStatus class]];
-    [statusMapping mapKeyPath:@"message" toAttribute:@"Message"];
-    [statusMapping mapKeyPath:@"picture" toAttribute:@"ImageURL"];
-    [statusMapping mapKeyPath:@"created_time" toAttribute:@"DateCreated"];
+    [statusMapping mapKeyPath:@"message" toAttribute:@"message"];
+    [statusMapping mapKeyPath:@"picture" toAttribute:@"imageURL"];
+    [statusMapping mapKeyPath:@"created_time" toAttribute:@"dateCreated"];
     [facebookObjectManager.mappingProvider setMapping:statusMapping forKeyPath:@"data"];
     [facebookObjectManager loadObjectsAtResourcePath:@"" delegate:self];
+    
+    RKObjectManager* twitterObjectManager = [RKObjectManager objectManagerWithBaseURL:[NSURL URLWithString:@"https://api.twitter.com/1/statuses/user_timeline.json?screen_name=LSMSA&count=20"]];
+    RKObjectMapping* tweetMapping = [RKObjectMapping mappingForClass:[Tweet class]];
+    [tweetMapping mapKeyPath:@"text" toAttribute:@"textBody"];
+    [tweetMapping mapKeyPath:@"created_at" toAttribute:@"dateCreated"];
+    [twitterObjectManager.mappingProvider setMapping:statusMapping forKeyPath:@""];
+    [twitterObjectManager loadObjectsAtResourcePath:@"" delegate:self];
     
 }
 
