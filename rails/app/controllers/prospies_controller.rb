@@ -108,7 +108,7 @@ class ProspiesController < ApplicationController
   			prospy.interest,
   			prospy.high_school,
   			prospy.year,
-  			prospy.concentration_id.blank? ? 'none selected' : propsy.concentration.name
+  			prospy.concentration_id.blank? ? '' : propsy.concentration.name
   			]
   		end 
   	end 
