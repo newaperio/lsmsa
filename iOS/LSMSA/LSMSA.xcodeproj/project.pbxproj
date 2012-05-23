@@ -361,7 +361,10 @@
 				187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */,
 				184000F5156D2B3600460230 /* FacebookView.m in Sources */,
 				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
+<<<<<<< Updated upstream
 				E7FB3C0A156D6D8D002E41B8 /* InterestViewController.m in Sources */,
+=======
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
