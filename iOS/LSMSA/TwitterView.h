@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Tweet.h"
 
-@interface TwitterView : UIView
+@interface TwitterView : UITableViewCell
+
+@property (nonatomic, retain) NSMutableArray *tweetArray;
+@property (nonatomic, retain) IBOutlet UILabel *tweetText;
 
 @end

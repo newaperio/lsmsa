@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "FacebookStatus.h"
 
-@interface FacebookView : UIView
+@interface FacebookView : UITableViewCell
+
+@property (nonatomic, retain) IBOutlet UILabel *statusText;
 
 @end
