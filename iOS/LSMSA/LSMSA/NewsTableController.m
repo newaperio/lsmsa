@@ -67,11 +67,14 @@
 
 -(void)objectLoader: (RKObjectLoader*)objectLoader didLoadObjects:(NSArray *)objects{
     NSLog(@"%@", objects.description);
+<<<<<<< Updated upstream
     
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
+=======
+>>>>>>> Stashed changes
     
 }
 
