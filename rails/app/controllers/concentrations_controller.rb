@@ -14,7 +14,7 @@ class ConcentrationsController < ApplicationController
   # GET /concentrations/1.json
   def show
     @concentration = Concentration.find(params[:id])
-    @prospies = @concentration.prospies
+    @prospies = @concentration.prospies.order("name").page(params[:page]).per(1)
 
     respond_to do |format|
       format.html # show.html.erb

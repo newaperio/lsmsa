@@ -2,8 +2,7 @@ class ProspiesController < ApplicationController
   # GET /prospies
   # GET /prospies.json
   def index
-    @prospies = Prospy.all
-
+    @prospies = Prospy.order("name").page(params[:page]).per(1)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @prospies }
@@ -91,7 +90,7 @@ class ProspiesController < ApplicationController
    
 
   
-  def index
-  	@prospies = Prospy.order(sort_column + ' ' + sort_direction)
-  end
+#   def index
+#   	@prospies = Prospy.order(sort_column + ' ' + sort_direction)
+#   end
 end
