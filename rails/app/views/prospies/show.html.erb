@@ -3,19 +3,27 @@
 
 <div class="container"><dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @prospy.name %></dd>
+  <dd><%= @prospy.name %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
-  <dd><%= @prospy.email %></dd>
+  <dd><%= @prospy.email %>&nbsp</dd>
+  <dt><strong><%= model_class.human_attribute_name(:telephone_number) %>:</strong></dt>
+  <dd><%= @prospy.telephone_number %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:address_1) %>:</strong></dt>
-  <dd><%= @prospy.address_1 %></dd>
+  <dd><%= @prospy.address_1 %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:address_2) %>:</strong></dt>
-  <dd><%= @prospy.address_2 %></dd>
+  <dd><%= @prospy.address_2 %>&nbsp;</dd>
+  <dt><strong>City:</strong></dt>
+  <dd><%= @prospy.cities %>&nbsp</dd>
+  <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
+  <dd><%= @prospy.state %>&nbsp</dd>
+  <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
+  <dd><%= @prospy.zip %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:interest) %>:</strong></dt>
-  <dd><%= @prospy.interest %></dd>
+  <dd><%= @prospy.interest %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:high_school) %>:</strong></dt>
-  <dd><%= @prospy.high_school %></dd>
+  <dd><%= @prospy.high_school %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:concentration_id) %>:</strong></dt>
-  <dd><%= Concentration.find(@prospy.concentration_id).name %></dd>
+  <dd><%= Concentration.find(@prospy.concentration_id).name %>&nbsp</dd>
 </dl></div>
 
 <div class="form-actions">

@@ -389,7 +389,7 @@ static const NSTimeInterval kFlushDelay = 0.3;
 
 - (void)cancelRequest:(RKRequest*)request loadNext:(BOOL)loadNext {
     if ([request isUnsent]) {
-        RKLogDebug(@"Cancelled undispatched request %@ and removed from queue %@", request, self);
+        RKLogDebug(@"Canceled undispatched request %@ and removed from queue %@", request, self);
 
         [self removeRequest:request];
         request.delegate = nil;
@@ -398,7 +398,7 @@ static const NSTimeInterval kFlushDelay = 0.3;
             [_delegate requestQueue:self didCancelRequest:request];
         }
     } else if ([self containsRequest:request] && [request isLoading]) {
-        RKLogDebug(@"Cancelled loading request %@ and removed from queue %@", request, self);
+        RKLogDebug(@"Canceled loading request %@ and removed from queue %@", request, self);
 
         [request cancel];
         request.delegate = nil;

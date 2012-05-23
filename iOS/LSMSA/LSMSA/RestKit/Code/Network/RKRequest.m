@@ -88,7 +88,7 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
 @interface RKRequest ()
 @property (nonatomic, assign, readwrite, getter = isLoaded) BOOL loaded;
 @property (nonatomic, assign, readwrite, getter = isLoading) BOOL loading;
-@property (nonatomic, assign, readwrite, getter = isCancelled) BOOL cancelled;
+@property (nonatomic, assign, readwrite) BOOL canceled;
 @property (nonatomic, retain, readwrite) RKResponse *response;
 @end
 
@@ -123,12 +123,13 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
 @synthesize onDidFailLoadWithError;
 @synthesize additionalRootCertificates = _additionalRootCertificates;
 @synthesize disableCertificateValidation = _disableCertificateValidation;
+@synthesize cancelled = _cancelled;
 @synthesize followRedirect = _followRedirect;
 @synthesize runLoopMode = _runLoopMode;
 @synthesize loaded = _loaded;
 @synthesize loading = _loading;
+@synthesize canceled = _canceled;
 @synthesize response = _response;
-@synthesize cancelled = _cancelled;
 
 #if TARGET_OS_IPHONE
 @synthesize backgroundPolicy = _backgroundPolicy;
@@ -183,7 +184,7 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
     _connection = nil;
     self.loading = NO;
     self.loaded = NO;
-    self.cancelled = NO;
+    self.canceled = NO;
 }
 
 - (void)cleanupBackgroundTask {
@@ -406,7 +407,7 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
 }
 
 - (void)cancelAndInformDelegate:(BOOL)informDelegate {
-    self.cancelled = YES;
+    _cancelled = YES;
     [_connection cancel];
     [_connection release];
     _connection = nil;
@@ -435,7 +436,7 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
 - (void)fireAsynchronousRequest {
     RKLogDebug(@"Sending asynchronous %@ request to URL %@.", [self HTTPMethod], [[self URL] absoluteString]);
     if (![self prepareURLRequest]) {
-        RKLogWarning(@"Failed to send request asynchronously: prepareURLRequest returned NO.");
+        // TODO: Logging
         return;
     }
 
@@ -564,7 +565,7 @@ RKRequestMethod RKRequestMethodTypeFromName(NSString *methodName) {
         RKLogDebug(@"Sending synchronous %@ request to URL %@.", [self HTTPMethod], [[self URL] absoluteString]);
 
         if (![self prepareURLRequest]) {
-            RKLogWarning(@"Failed to send request synchronously: prepareURLRequest returned NO.");
+            // TODO: Logging
             return nil;
         }
 

@@ -1,5 +1,7 @@
 Lsmsa::Application.routes.draw do
-  resources :concentrations
+  resources :concentrations do
+  	get "prospies"
+  end
 
   resources :prospies do
     get "export", on: :collection
