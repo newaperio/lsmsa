@@ -66,7 +66,16 @@
 }
 
 -(void)objectLoader: (RKObjectLoader*)objectLoader didLoadObjects:(NSArray *)objects{
-    NSLog(@"%@", objects.description);
+    if([NSString stringWithFormat:@"%@", [[objects objectAtIndex:0] class]] == @"FacebookStatus")
+        _facebookStatuses = objects;
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+}
+
+-(IBAction)TestInfo:(id)sender
+{
     
 }
 
