@@ -135,10 +135,14 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zi7-XR-sc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Aoj-Ab-7Gb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dFB-NO-LKh">
+                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="dFB-NO-LKh">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Graph Paper - iPhone.png" id="rUr-GP-tbh">
+                                <rect key="frame" x="0.0" y="44" width="320" height="416"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Made by LSMSA Kids by LSMSA Kids" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="BeM-bY-ZxQ">
                                 <rect key="frame" x="0.0" y="44" width="320" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -259,6 +263,9 @@
             <point key="canvasLocation" x="-10" y="728"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Graph Paper - iPhone.png" width="320" height="480"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
