@@ -11,8 +11,12 @@
 
 @interface FacebookView : UITableViewCell
 
+<<<<<<< Updated upstream
+@property (nonatomic, retain) FacebookStatus *facebookData;
+=======
 @property (nonatomic, retain) FacebookStatus *status;
 
+>>>>>>> Stashed changes
 @property (nonatomic, retain) IBOutlet UILabel *statusText;
 @property (nonatomic, retain) IBOutlet UILabel *statusDate;
 @property (nonatomic, retain) IBOutlet UIImageView *statusImage;

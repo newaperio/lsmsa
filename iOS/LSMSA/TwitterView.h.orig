@@ -11,9 +11,13 @@
 
 @interface TwitterView : UITableViewCell
 
+<<<<<<< Updated upstream
+@property (nonatomic, retain) Tweet *tweetData;
+=======
 @property (nonatomic, retain) Tweet* tweet;
 
 @property (nonatomic, retain) IBOutlet UILabel *tweetDate;
+>>>>>>> Stashed changes
 @property (nonatomic, retain) IBOutlet UILabel *tweetText;
 
 -(void) updateCell;

@@ -10,7 +10,12 @@
 
 @implementation TwitterView
 
+<<<<<<< Updated upstream
+@synthesize tweetText = _tweetText;
+@synthesize tweetData = _tweetData;
+=======
 @synthesize tweetText = _text, tweetDate = _date, tweet = _tweet;
+>>>>>>> Stashed changes
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -21,9 +26,6 @@
     return self;
 }
 
-
-    return cell;
-}
 
 -(void)setTweet:(Tweet *)tweet {
     _tweet = tweet;

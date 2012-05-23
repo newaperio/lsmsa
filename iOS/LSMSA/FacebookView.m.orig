@@ -10,7 +10,12 @@
 
 @implementation FacebookView
 
+<<<<<<< Updated upstream
+@synthesize facebookData = _facebookData;
+@synthesize statusText = _statusText;
+=======
 @synthesize statusText = _text, statusDate = _date, statusImage = _image, status = _status;
+>>>>>>> Stashed changes
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -21,6 +26,8 @@
     return self;
 }
 
+<<<<<<< Updated upstream
+=======
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -49,4 +56,5 @@
     // todo: add image code
 }
 
+>>>>>>> Stashed changes
 @end
