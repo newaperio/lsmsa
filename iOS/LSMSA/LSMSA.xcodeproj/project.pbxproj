@@ -27,14 +27,8 @@
 		20B9A1BA156BE07200B29611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1B9156BE07200B29611 /* main.m */; };
 		20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1BD156BE07200B29611 /* AppDelegate.m */; };
 		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
-		E7284F55156D7F3000492D5A /* logo_crest_240w.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7284F54156D7F3000492D5A /* logo_crest_240w.jpg */; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
-		E7FB030C156D4B9E00810AE2 /* NSUMapSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FB030B156D4B9E00810AE2 /* NSUMapSmall@2x.png */; };
-		E7FB0311156D4CC600810AE2 /* 103-map%402x.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FB030F156D4CC600810AE2 /* 103-map%402x.png */; };
-		E7FB0312156D4CC600810AE2 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = E7FB0310156D4CC600810AE2 /* 103-map.png */; };
-		E7FB3C0A156D6D8D002E41B8 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FB3C09156D6D8D002E41B8 /* InterestViewController.m */; };
-		E7FB3C0B156D6E6C002E41B8 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FB3BD2156D61B7002E41B8 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,16 +106,8 @@
 		20B9A1BC156BE07200B29611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20B9A1BD156BE07200B29611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20B9A1C0156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		E7284F54156D7F3000492D5A /* logo_crest_240w.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo_crest_240w.jpg; sourceTree = "<group>"; };
 		E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone.png"; sourceTree = "<group>"; };
 		E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone@2x.png"; sourceTree = "<group>"; };
-		E7FB030B156D4B9E00810AE2 /* NSUMapSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSUMapSmall@2x.png"; sourceTree = "<group>"; };
-		E7FB030F156D4CC600810AE2 /* 103-map%402x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map%402x.png"; sourceTree = "<group>"; };
-		E7FB0310156D4CC600810AE2 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
-		E7FB3BD1156D61B7002E41B8 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
-		E7FB3BD2156D61B7002E41B8 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		E7FB3C08156D6D8D002E41B8 /* InterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestViewController.h; sourceTree = "<group>"; };
-		E7FB3C09156D6D8D002E41B8 /* InterestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,19 +199,11 @@
 		20B9A1B3156BE07200B29611 /* LSMSA */ = {
 			isa = PBXGroup;
 			children = (
-				E7284F54156D7F3000492D5A /* logo_crest_240w.jpg */,
 				20B9A1B4156BE07200B29611 /* Supporting Files */,
 				18665DA2156BED93000A9740 /* Models */,
 				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
 				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
-				E7FB3BD1156D61B7002E41B8 /* MapViewController.h */,
-				E7FB3BD2156D61B7002E41B8 /* MapViewController.m */,
-				E7FB030F156D4CC600810AE2 /* 103-map%402x.png */,
-				E7FB0310156D4CC600810AE2 /* 103-map.png */,
-				E7FB030B156D4B9E00810AE2 /* NSUMapSmall@2x.png */,
-				E7FB3C08156D6D8D002E41B8 /* InterestViewController.h */,
-				E7FB3C09156D6D8D002E41B8 /* InterestViewController.m */,
 				18665D97156BE67E000A9740 /* NewsTableController.h */,
 				18665D98156BE67E000A9740 /* NewsTableController.m */,
 			);
@@ -343,10 +321,12 @@
 				20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */,
 				E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */,
+<<<<<<< Updated upstream
+=======
 				E7FB030C156D4B9E00810AE2 /* NSUMapSmall@2x.png in Resources */,
 				E7FB0311156D4CC600810AE2 /* 103-map%402x.png in Resources */,
 				E7FB0312156D4CC600810AE2 /* 103-map.png in Resources */,
-				E7284F55156D7F3000492D5A /* logo_crest_240w.jpg in Resources */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7FB3C0B156D6E6C002E41B8 /* MapViewController.m in Sources */,
 				20B9A1BA156BE07200B29611 /* main.m in Sources */,
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
 				18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */,
@@ -365,7 +344,6 @@
 				187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */,
 				184000F5156D2B3600460230 /* FacebookView.m in Sources */,
 				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
-				E7FB3C0A156D6D8D002E41B8 /* InterestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,10 +398,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -444,10 +418,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-all_load",
-				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
