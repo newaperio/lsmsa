@@ -47,7 +47,12 @@
     RKObjectMapping* tweetMapping = [RKObjectMapping mappingForClass:[Tweet class]];
     [tweetMapping mapKeyPath:@"text" toAttribute:@"textBody"];
     [tweetMapping mapKeyPath:@"created_at" toAttribute:@"dateCreated"];
-    [twitterObjectManager.mappingProvider setMapping:tweetMapping forKeyPath:@""];
+    //[twitterObjectManager.mappingProvider setMapping:tweetMapping forKeyPath:@""];
+    tweetMapping.forceCollectionMapping = true;
+    [twitterObjectManager loadObjectsAtResourcePath:@"" usingBlock:^(RKObjectLoader *loader) {
+        loader.objectMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[Tweet class]];
+        NSLog(@"echo");
+    }];
     [twitterObjectManager loadObjectsAtResourcePath:@"" delegate:self];
     
 }
@@ -74,6 +79,7 @@
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
 {
+    NSLog(@"EPIC FAI:L!");
 }
 
 -(void)TestInfo

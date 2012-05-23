@@ -13,8 +13,8 @@
 
 @interface NewsTableController : UITableViewController <RKObjectLoaderDelegate>
 {
-    NSMutableArray* _tweets;
-    NSMutableArray* _facebookStatuses;
+    NSArray* _tweets;
+    NSArray* _facebookStatuses;
     //NSMutableArray* _scoop; -- we are probably going to drop the source "Inside Scoop" because it gives us no XML and bad HTML. (its html 4.0)
 }
 
