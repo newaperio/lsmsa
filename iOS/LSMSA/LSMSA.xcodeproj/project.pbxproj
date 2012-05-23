@@ -20,7 +20,6 @@
 		18665DDE156BF7CC000A9740 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD8156BF7CC000A9740 /* Security.framework */; };
 		18665DDF156BF7CC000A9740 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD9156BF7CC000A9740 /* SystemConfiguration.framework */; };
 		187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BEB8D156C1B9B006810C5 /* Tweet.m */; };
-		18B69AF5156D40BA007728AB /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69AF4156D40BA007728AB /* Reference.m */; };
 		20B9A1AE156BE07200B29611 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AD156BE07200B29611 /* UIKit.framework */; };
 		20B9A1B0156BE07200B29611 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AF156BE07200B29611 /* Foundation.framework */; };
 		20B9A1B2156BE07200B29611 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1B1156BE07200B29611 /* CoreGraphics.framework */; };
@@ -28,6 +27,7 @@
 		20B9A1BA156BE07200B29611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1B9156BE07200B29611 /* main.m */; };
 		20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1BD156BE07200B29611 /* AppDelegate.m */; };
 		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
+		E724418C156D5D4400D0E72E /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E724418A156D5D4400D0E72E /* InterestViewController.m */; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
 /* End PBXBuildFile section */
@@ -96,8 +96,6 @@
 		18665DD9156BF7CC000A9740 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		187BEB8C156C1B9B006810C5 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		187BEB8D156C1B9B006810C5 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
-		18B69AF3156D40BA007728AB /* Reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reference.h; sourceTree = "<group>"; };
-		18B69AF4156D40BA007728AB /* Reference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reference.m; sourceTree = "<group>"; };
 		20B9A1A9156BE07200B29611 /* LSMSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSMSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B9A1AD156BE07200B29611 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20B9A1AF156BE07200B29611 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,6 +107,8 @@
 		20B9A1BC156BE07200B29611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20B9A1BD156BE07200B29611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20B9A1C0156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		E7244189156D5D4400D0E72E /* InterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestViewController.h; sourceTree = "<group>"; };
+		E724418A156D5D4400D0E72E /* InterestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestViewController.m; sourceTree = "<group>"; };
 		E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone.png"; sourceTree = "<group>"; };
 		E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,12 +142,6 @@
 				18665DA5156BEE47000A9740 /* FacebookStatus.m */,
 				187BEB8C156C1B9B006810C5 /* Tweet.h */,
 				187BEB8D156C1B9B006810C5 /* Tweet.m */,
-				184000F6156D2B5800460230 /* TwitterView.h */,
-				184000F7156D2B5800460230 /* TwitterView.m */,
-				18B69AF3156D40BA007728AB /* Reference.h */,
-				18B69AF4156D40BA007728AB /* Reference.m */,
-				184000F3156D2B3600460230 /* FacebookView.h */,
-				184000F4156D2B3600460230 /* FacebookView.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -162,6 +156,17 @@
 				18665DD0156BF63A000A9740 /* RestKitResources.bundle */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		18B69AFA156D5D64007728AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				184000F6156D2B5800460230 /* TwitterView.h */,
+				184000F7156D2B5800460230 /* TwitterView.m */,
+				184000F3156D2B3600460230 /* FacebookView.h */,
+				184000F4156D2B3600460230 /* FacebookView.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		20B9A19E156BE07200B29611 = {
@@ -204,11 +209,14 @@
 		20B9A1B3156BE07200B29611 /* LSMSA */ = {
 			isa = PBXGroup;
 			children = (
+				18B69AFA156D5D64007728AB /* Cells */,
 				20B9A1B4156BE07200B29611 /* Supporting Files */,
 				18665DA2156BED93000A9740 /* Models */,
 				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
 				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
+				E7244189156D5D4400D0E72E /* InterestViewController.h */,
+				E724418A156D5D4400D0E72E /* InterestViewController.m */,
 				18665D97156BE67E000A9740 /* NewsTableController.h */,
 				18665D98156BE67E000A9740 /* NewsTableController.m */,
 			);
@@ -343,7 +351,11 @@
 				187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */,
 				184000F5156D2B3600460230 /* FacebookView.m in Sources */,
 				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
+<<<<<<< Updated upstream
 				18B69AF5156D40BA007728AB /* Reference.m in Sources */,
+				E724418C156D5D4400D0E72E /* InterestViewController.m in Sources */,
+=======
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -123,7 +123,7 @@
 - (void)finalizeLoad:(BOOL)successful {
     self.loading = NO;
     self.loaded = successful;
-    
+
     if ([self.delegate respondsToSelector:@selector(objectLoaderDidFinishLoading:)]) {
         [(NSObject<RKObjectLoaderDelegate>*)self.delegate performSelectorOnMainThread:@selector(objectLoaderDidFinishLoading:)
                                                                            withObject:self waitUntilDone:YES];
@@ -407,10 +407,7 @@
                                                                 object:self
                                                               userInfo:userInfo];
         }
-        
-        if (! self.isCancelled) {
-            [self informDelegateOfError:error];
-        }
+        [self informDelegateOfError:error];
 
         [self finalizeLoad:NO];
     }
