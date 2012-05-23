@@ -27,6 +27,7 @@
 		20B9A1BA156BE07200B29611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1B9156BE07200B29611 /* main.m */; };
 		20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1BD156BE07200B29611 /* AppDelegate.m */; };
 		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
+		20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A25D156D9B8B00B29611 /* MapViewController.m */; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
 		E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C68034156D926D00DD30B6 /* InterestViewController.m */; };
@@ -107,6 +108,8 @@
 		20B9A1BC156BE07200B29611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20B9A1BD156BE07200B29611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20B9A1C0156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		20B9A25C156D9B8B00B29611 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		20B9A25D156D9B8B00B29611 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone.png"; sourceTree = "<group>"; };
 		E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone@2x.png"; sourceTree = "<group>"; };
 		E7C68033156D926D00DD30B6 /* InterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestViewController.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
 				E7C68033156D926D00DD30B6 /* InterestViewController.h */,
 				E7C68034156D926D00DD30B6 /* InterestViewController.m */,
+				20B9A25C156D9B8B00B29611 /* MapViewController.h */,
+				20B9A25D156D9B8B00B29611 /* MapViewController.m */,
 				18665D97156BE67E000A9740 /* NewsTableController.h */,
 				18665D98156BE67E000A9740 /* NewsTableController.m */,
 			);
@@ -344,6 +349,7 @@
 				184000F5156D2B3600460230 /* FacebookView.m in Sources */,
 				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
 				E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */,
+				20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
