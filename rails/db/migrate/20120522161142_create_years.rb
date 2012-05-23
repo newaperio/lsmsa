@@ -1,6 +1,6 @@
 class CreateYears < ActiveRecord::Migration
   def change
-    create_table :years do 
+    create_table :years do |t|
       t.string :name
 
       t.timestamps
