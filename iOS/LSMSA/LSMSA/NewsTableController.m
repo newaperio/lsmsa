@@ -68,4 +68,9 @@
     
 }
 
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error
+{
+    
+}
+
 @end
