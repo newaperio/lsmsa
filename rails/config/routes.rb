@@ -1,6 +1,4 @@
 Lsmsa::Application.routes.draw do
-  resources :years
-
   resources :concentrations
 
   resources :prospies do
