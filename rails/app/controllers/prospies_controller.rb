@@ -82,7 +82,6 @@ class ProspiesController < ApplicationController
   end
   
   def export
-  	require 'csv'
   	@prospies = Prospy.all
   	
   	csv = CSV.generate(:force_quotes => true) do |line|
