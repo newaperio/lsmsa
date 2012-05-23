@@ -12,8 +12,8 @@
   <dd><%= @prospy.address_1 %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:address_2) %>:</strong></dt>
   <dd><%= @prospy.address_2 %>&nbsp;</dd>
-  <dt><strong>City:</strong></dt>
-  <dd><%= @prospy.cities %>&nbsp</dd>
+  <dt><strong><%= model_class.human_attribute_name(:city) %>:</strong></dt>
+  <dd><%= @prospy.city %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
   <dd><%= @prospy.state %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
@@ -22,8 +22,8 @@
   <dd><%= @prospy.interest %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:high_school) %>:</strong></dt>
   <dd><%= @prospy.high_school %>&nbsp</dd>
-  <dt><strong><%= model_class.human_attribute_name(:concentration_id) %>:</strong></dt>
-  <dd><%= Concentration.find(@prospy.concentration_id).name %>&nbsp</dd>
+  <dt><strong><%= model_class.human_attribute_name(:concentration) %>:</strong></dt>
+  <dd><%= Concentration.find(@prospy.concentration).name unless @prospy.concentration.blank? %>&nbsp</dd>
 </dl></div>
 
 <div class="form-actions">

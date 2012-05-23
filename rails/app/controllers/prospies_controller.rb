@@ -2,7 +2,7 @@ class ProspiesController < ApplicationController
   # GET /prospies
   # GET /prospies.json
   def index
-    @prospies = Prospy.order("name").page(params[:page]).per(1)
+    @prospies = Prospy.order('created _at desc').page(params[:page]).per(25)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @prospies }
@@ -108,7 +108,7 @@ class ProspiesController < ApplicationController
   			prospy.interest,
   			prospy.high_school,
   			prospy.year,
-  			prospy.concentration.name
+  			prospy.concentration_id.blank? ? '' : propsy.concentration.name
   			]
   		end 
   	end 

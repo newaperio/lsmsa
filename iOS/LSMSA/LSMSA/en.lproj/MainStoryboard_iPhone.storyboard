@@ -159,11 +159,12 @@
                             <navigationBar contentMode="scaleToFill" id="E9c-0i-tTB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="About" id="qTL-Ng-P00">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="l2r-4x-vv8">
                                             <connections>
-                                                <segue destination="4" kind="modal" modalTransitionStyle="crossDissolve" id="YyV-ob-Vt7"/>
+                                                <segue destination="4" kind="modal" identifier="aboutToTabBarControllerSegue" modalTransitionStyle="crossDissolve" id="l4E-pa-EOI"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -288,8 +289,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extreme Help From" lineBreakMode="tailTruncation" minimumFontSize="10" id="bGv-zO-Y84">
-                                <rect key="frame" x="113" y="390" width="148" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extreme Assistance From" lineBreakMode="tailTruncation" minimumFontSize="10" id="bGv-zO-Y84">
+                                <rect key="frame" x="93" y="387" width="148" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -442,29 +443,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="103-map.png" width="26" height="21"/>
-        <image name="Graph Paper - iPhone.png" width="320" height="480"/>
+        <image name="103-map.png" width="16" height="16"/>
+        <image name="Graph Paper - iPhone.png" width="16" height="16"/>
     </resources>
     <classes>
         <class className="FacebookView" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookView.h"/>
             <relationships>
                 <relationship kind="outlet" name="statusText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InterestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InterestViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendPressed:"/>
-                <relationship kind="outlet" name="address1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="address2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="currentSchool" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gradYear" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="state" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="MapViewController" superclassName="UIViewController">
