@@ -1,0 +1,35 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      
+      <th><%= sortable "name" %></th>
+      <th><%= sortable "email" %></th>
+      <th><%= sortable "high_school" %></th>
+      <th><%= sortable "concentration_id" %></th>
+      <th><%= sortable "created_at" %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @prospies.each do |prospy| %>
+      <tr>
+        
+        <td><%= link_to prospy.name, prospy_path(prospy) %></td>
+        <td><%= mail_to prospy.email %></td>
+        <td><%= prospy.high_school %></td>
+        <td><%= prospy.concentration.try(:name) %></td>
+        <td><%= prospy.created_at.strftime("%m/%d/%Y") %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_prospy_path(prospy), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      prospy_path(prospy),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+      
+    <% end %>
+  </tbody>
+</table>

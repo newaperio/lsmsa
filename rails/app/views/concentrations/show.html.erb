@@ -6,6 +6,8 @@
   <dd><%= @concentration.name %></dd>
 </dl>
 
+<%= render 'prospies/index' %>
+
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               concentrations_path, :class => 'btn'  %>
