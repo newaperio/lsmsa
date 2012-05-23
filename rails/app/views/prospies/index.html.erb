@@ -4,11 +4,10 @@
   <thead>
     <tr>
       
-      <th><%= model_class.human_attribute_name(:first_name) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
       <th><%= model_class.human_attribute_name(:high_school) %></th>
       <th><%= model_class.human_attribute_name(:concentration_id) %></th>
-      <th><%= model_class.human_attribute_name(:year_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -21,7 +20,6 @@
         <td><%= prospy.email %></td>
         <td><%= prospy.high_school %></td>
         <td><%= prospy.concentration.try(:name) %></td>
-        <td><%= prospy.year_id %></td>
         <td><%= prospy.created_at.strftime("%m/%d/%Y") %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
