@@ -1,15 +1,15 @@
 //
-//  NewsTableController.h
+//  FacebookPhotoModel.m
 //  LSMSA
 //
 //  Created by Apple on 5/22/12.
 //  Copyright (c) 2012 NewAperio. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import <RestKit/Restkit.h>
 #import "FacebookStatus.h"
 
-@interface NewsTableController : UIViewController
+@implementation FacebookStatus
+
+@synthesize message = _message, imageURL = _imageURL, dateCreated = _dateCreated;
 
 @end

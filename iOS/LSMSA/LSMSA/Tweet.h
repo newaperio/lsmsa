@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TwitterModel : NSObject
+@interface Tweet : NSObject
 
-@property (nonatomic,retain) NSString* TextBody;
-@property (nonatomic,retain) NSDate* DateCreated;
+@property (nonatomic, retain) NSString* textBody;
+@property (nonatomic, retain) NSDate* dateCreated;
 
--(TwitterModel*) GetTweet;
+- (Tweet *)getTweet;
 
 @end
