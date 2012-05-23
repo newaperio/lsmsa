@@ -34,15 +34,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"Got to it!");
+    newArray = [[NSMutableArray alloc] init];
     
-    
-    [self loadFacebookContent];
-    
-    
-    
-    //facebookObjectManager.baseURL = @"https://api.twitter.com/1/statuses/user_timeline.json?screen_name=LSMSA&count=20";
-    
-    // ^^ Evan is gonna work on the above comment'dout code for us since it involes him modifying restkit. 
+    [self loadFacebookContent]; // LOADS ALL CONTENTERS
     
     
 }
@@ -68,8 +62,7 @@
     }
     if([[NSString stringWithFormat:@"%@", [[objects objectAtIndex:0] class]] isEqualToString: @"Tweet"]) {
         _tweets = objects;
-        NSLog(@"%@", _tweets);
-        
+        [self sortTheDataFromTheStuffWeGotFromJsonInAPinchThankYouNSArrayForGivingUsGoodFunctionsNotLikeThis];
     }
 }
 
@@ -83,10 +76,11 @@
     NSLog(@"got it 2.0");
     for (FacebookStatus *status in _facebookStatuses) {
         NSLog(@"%@", status);
+        NSLog(@"%@", [status dateCreated]);
     }
     
     for (Tweet *tweet in _tweets) {
-        NSLog(@"%@", tweet);
+        NSLog(@"%@", tweet.dateCreated);
     }
 }
 
@@ -108,22 +102,42 @@
     RKObjectManager* twitterObjectManager = [RKObjectManager objectManagerWithBaseURL:[NSURL URLWithString:@"https://api.twitter.com/1/statuses/user_timeline.json?screen_name=LSMSA&count=20"]];
     [RKObjectManager setSharedManager:twitterObjectManager];
     
-   
-    
     RKObjectMapping* tweetMapping = [RKObjectMapping mappingForClass:[Tweet class]];
     [tweetMapping mapKeyPath:@"text" toAttribute:@"textBody"];
     [tweetMapping mapKeyPath:@"created_at" toAttribute:@"dateCreated"];
-    //[twitterObjectManager.mappingProvider setMapping:tweetMapping forKeyPath:@""];
-    [twitterObjectManager.mappingProvider addObjectMapping:tweetMapping];
     tweetMapping.forceCollectionMapping = TRUE;
+    
+    [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
+
+    
+    [twitterObjectManager.mappingProvider addObjectMapping:tweetMapping];
+        
     [twitterObjectManager loadObjectsAtResourcePath:@"" usingBlock:^(RKObjectLoader *loader) {
         loader.objectMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[Tweet class]];
         loader.delegate = bself;
         NSLog(@"echo");
     }];
+}
 
-    [twitterObjectManager loadObjectsAtResourcePath:@"" delegate:self];
-
+-(void)sortTheDataFromTheStuffWeGotFromJsonInAPinchThankYouNSArrayForGivingUsGoodFunctionsNotLikeThis
+{
+    for (Tweet* tweet in _tweets) {
+        [newArray addObject:tweet];
+    }
+    for (FacebookStatus* status in _facebookStatuses) {
+        [newArray addObject:status];
+    }
+    
+    newArray = [NSMutableArray arrayWithArray:[newArray sortedArrayUsingComparator:^(id a, id b) {
+        NSDate *first = [a dateCreated];
+        NSDate *second = [b dateCreated];
+        return [second compare:first
+                ];
+    }] ];
+    
+    for (id obj in newArray) {
+        NSLog(@"%@",[obj dateCreated]);
+    }
 }
 
 @end
