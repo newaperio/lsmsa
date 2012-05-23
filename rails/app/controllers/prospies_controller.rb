@@ -2,7 +2,7 @@ class ProspiesController < ApplicationController
   # GET /prospies
   # GET /prospies.json
   def index
-    @prospies = Prospy.order("name").page(params[:page]).per(1)
+    @prospies = Prospy.order('created_at desc').page(params[:page]).per(25)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @prospies }
@@ -102,24 +102,18 @@ class ProspiesController < ApplicationController
   			prospy.email,
   			prospy.telephone_number,
   			prospy.address_1 + " " + prospy.address_2, 
-  			prospy.cities,
+  			prospy.city,
   			prospy.state,
   			prospy.zip, 
   			prospy.interest,
   			prospy.high_school,
   			prospy.year,
-  			prospy.concentration.name
+  			prospy.concentration_id.blank? ? 'none selected' : prospy.concentration.name
   			]
   		end 
   	end 
-	respond_to do |format|
-  		format.csv { send_data(csv_string, :filename => "prospy_" + Time.now.strftime("%m-%d-%Y") + ".csv", :type => "text/csv") }
-	end
+  	respond_to do |format|
+    		format.csv { send_data(csv_string, :filename => "prospy_" + Time.now.strftime("%m-%d-%Y") + ".csv", :type => "text/csv") }
+  	end
   end
-   
-
-  
-#   def index
-#   	@prospies = Prospy.order(sort_column + ' ' + sort_direction)
-#   end
 end

@@ -13,7 +13,7 @@
   <dt><strong><%= model_class.human_attribute_name(:address_2) %>:</strong></dt>
   <dd><%= @prospy.address_2 %>&nbsp;</dd>
   <dt><strong>City:</strong></dt>
-  <dd><%= @prospy.cities %>&nbsp</dd>
+  <dd><%= @prospy.city %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:state) %>:</strong></dt>
   <dd><%= @prospy.state %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:zip) %>:</strong></dt>
@@ -23,17 +23,9 @@
   <dt><strong><%= model_class.human_attribute_name(:high_school) %>:</strong></dt>
   <dd><%= @prospy.high_school %>&nbsp</dd>
   <dt><strong><%= model_class.human_attribute_name(:concentration_id) %>:</strong></dt>
-  <dd><%= Concentration.find(@prospy.concentration_id).name %>&nbsp</dd>
+  <dd><%= Concentration.find(@prospy.concentration_id).name unless @prospy.concentration_id.blank? %>&nbsp</dd>
 </dl></div>
 
 <div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-              prospies_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_prospy_path(@prospy), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              prospy_path(@prospy),
-              :method => 'delete',
-              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
-              :class => 'btn btn-danger' %>
+  <%= link_to 'Back to Index', root_path  %>
 </div>
