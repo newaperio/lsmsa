@@ -288,8 +288,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extreme Help From" lineBreakMode="tailTruncation" minimumFontSize="10" id="bGv-zO-Y84">
-                                <rect key="frame" x="111" y="362" width="148" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extreme Assistance From" lineBreakMode="tailTruncation" minimumFontSize="10" id="bGv-zO-Y84">
+                                <rect key="frame" x="90" y="359" width="148" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -316,10 +316,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="logo_crest_240w.jpg" id="INj-Xm-pG9">
-                                <rect key="frame" x="8" y="304" width="88" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -448,7 +444,6 @@
     <resources>
         <image name="103-map.png" width="26" height="21"/>
         <image name="Graph Paper - iPhone.png" width="320" height="480"/>
-        <image name="logo_crest_240w.jpg" width="240" height="260"/>
     </resources>
     <classes>
         <class className="FacebookView" superclassName="UITableViewCell">

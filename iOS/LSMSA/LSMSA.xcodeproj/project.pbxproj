@@ -321,6 +321,12 @@
 				20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */,
 				E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */,
 				E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */,
+<<<<<<< Updated upstream
+=======
+				E7FB030C156D4B9E00810AE2 /* NSUMapSmall@2x.png in Resources */,
+				E7FB0311156D4CC600810AE2 /* 103-map%402x.png in Resources */,
+				E7FB0312156D4CC600810AE2 /* 103-map.png in Resources */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
