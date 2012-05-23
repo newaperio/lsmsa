@@ -1,4 +1,0 @@
-Documentation set was installed to Xcode!
-
-Path: /Users/loganleger/Library/Developer/Shared/Documentation/DocSets/org.restkit.RestKit.docset
-Time: 2012-05-23 15:00:26 +0000
