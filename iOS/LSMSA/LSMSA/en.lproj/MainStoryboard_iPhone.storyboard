@@ -305,7 +305,6 @@
         <image name="103-map.png" width="26" height="21"/>
         <image name="Graph Paper - iPhone.png" width="320" height="480"/>
     </resources>
-<<<<<<< Updated upstream
     <classes>
         <class className="FacebookView" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookView.h"/>
@@ -344,8 +343,6 @@
             </relationships>
         </class>
     </classes>
-=======
->>>>>>> Stashed changes
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
