@@ -102,7 +102,7 @@ class ProspiesController < ApplicationController
   			prospy.email,
   			prospy.telephone_number,
   			prospy.address_1 + " " + prospy.address_2, 
-  			prospy.cities,
+  			prospy.city,
   			prospy.state,
   			prospy.zip, 
   			prospy.interest,
