@@ -1,6 +1,5 @@
 class Prospy < ActiveRecord::Base
-	validates :email, :presence => true, :format => { :with => //\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i/`.0-9]/,
-   :message => "Not a Valid Email" }
+	validates :email, :presence => true, :format => { :with => /^([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})$/i, :message => "Not a Valid Email" }
+    validates :
 	belongs_to :concentration
-	belongs_to :year
 end
