@@ -442,47 +442,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="103-map.png" width="26" height="21"/>
-        <image name="Graph Paper - iPhone.png" width="320" height="480"/>
+        <image name="103-map.png" width="16" height="16"/>
+        <image name="Graph Paper - iPhone.png" width="16" height="16"/>
     </resources>
-    <classes>
-        <class className="FacebookView" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="statusText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="InterestViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InterestViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendPressed:"/>
-                <relationship kind="outlet" name="address1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="address2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="currentSchool" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gradYear" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="state" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MapViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="NewsTableController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsTableController.h"/>
-        </class>
-        <class className="TwitterView" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tweetText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
