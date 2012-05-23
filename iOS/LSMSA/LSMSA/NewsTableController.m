@@ -40,6 +40,7 @@
     [statusMapping mapKeyPath:@"picture" toAttribute:@"ImageURL"];
     [statusMapping mapKeyPath:@"created_time" toAttribute:@"DateCreated"];
     [facebookObjectManager.mappingProvider setMapping:statusMapping forKeyPath:@"data"];
+    [facebookObjectManager loadObjectsAtResourcePath:@"" delegate:self];
     
 }
 
@@ -54,6 +55,10 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+-(void)objectLoader: (RKObjectLoader*)objectLoader didLoadObjects:(NSArray *)objects{
+    
 }
 
 @end

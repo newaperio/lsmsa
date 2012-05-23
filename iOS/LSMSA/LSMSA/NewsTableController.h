@@ -12,8 +12,7 @@
 #import "Tweet.h"
 #import "Scoop.h"
 
-@interface NewsTableController : UIViewController
-
+@interface NewsTableController : UIViewController <RKObjectLoaderDelegate>
 {
     NSMutableArray* _tweets;
     NSMutableArray* _facebookStatuses;
