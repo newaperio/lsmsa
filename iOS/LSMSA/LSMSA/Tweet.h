@@ -13,6 +13,4 @@
 @property (nonatomic, retain) NSString* textBody;
 @property (nonatomic, retain) NSDate* dateCreated;
 
-- (Tweet *)getTweet;
-
 @end
