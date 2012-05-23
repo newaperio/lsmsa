@@ -34,7 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     NSLog(@"Got to it!");
-    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
     
     [self loadFacebookContent];
     
@@ -124,6 +125,27 @@
 
     [twitterObjectManager loadObjectsAtResourcePath:@"" delegate:self];
 
+}
+
+#pragma mark - UITableViewDelegate/UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Tweet";
+    
+    TwitterView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[TwitterView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    return cell;
 }
 
 @end
