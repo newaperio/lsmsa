@@ -2,4 +2,6 @@
 <h1>Prospective Students</h1>
 <%= render 'index' %>
 
-
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_prospy_path,
+            :class => 'btn btn-primary' %>
