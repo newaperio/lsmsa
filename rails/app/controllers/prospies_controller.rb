@@ -81,10 +81,39 @@ class ProspiesController < ApplicationController
   end
   
   def export
-  	@prospies = Prospy.all{|c| lines.push ["#{c.email}"]}
-	csv_string = @prospies 
+  	@prospies = Prospy.all
+  	csv_string = CSV.generate do |csv|
+  		csv << [
+  		"Name",
+  		"Email",
+  		"Telephone Number", 
+  		"Address",
+  		"City",
+  		"State",
+  		"Zip Code",
+  		"Interest", 
+  		"High School",
+  		"Year",
+  		"Concentration"
+  		]
+  		@prospies.each do |prospy|
+  			csv << [
+  			prospy.name,
+  			prospy.email,
+  			prospy.telephone_number,
+  			prospy.address_1 + " " + prospy.address_2, 
+  			prospy.cities,
+  			prospy.state,
+  			prospy.zip, 
+  			prospy.interest,
+  			prospy.high_school,
+  			prospy.year,
+  			prospy.concentration.name
+  			]
+  		end 
+  	end 
 	respond_to do |format|
-  		format.csv { send_data(csv_string, :filename => "prospy.csv", :type => "text/csv") }
+  		format.csv { send_data(csv_string, :filename => "prospy_" + Time.now.strftime("%m-%d-%Y") + ".csv", :type => "text/csv") }
 	end
   end
    
