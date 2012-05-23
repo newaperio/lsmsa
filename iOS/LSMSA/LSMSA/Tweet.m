@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 NewAperio. All rights reserved.
 //
 
-#import "TwitterModel.h"
+#import "Tweet.h"
 
-@implementation TwitterModel
+@implementation Tweet
 
-@synthesize TextBody = _text, DateCreated = _date;
+@synthesize textBody = _text, dateCreated = _date;
 
 
 

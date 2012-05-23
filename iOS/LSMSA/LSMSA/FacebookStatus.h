@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <Restkit/Restkit.h>
 
-@interface FacebookStatusModel : NSObject
-@property(nonatomic, retain) NSString* Message;
-@property(nonatomic, retain) NSString* ImageURL;
-@property(nonatomic, retain) NSDate* DateCreated;
+@interface FacebookStatus : NSObject
+
+@property(nonatomic, retain) NSString* message;
+@property(nonatomic, retain) NSString* imageURL;
+@property(nonatomic, retain) NSDate* dateCreated;
 
 @end
