@@ -12,6 +12,4 @@
 
 @synthesize textBody = _text, dateCreated = _date;
 
-
-
 @end
