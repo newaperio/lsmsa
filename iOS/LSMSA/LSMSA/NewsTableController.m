@@ -140,4 +140,33 @@
     }
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    if([[newArray objectAtIndex: indexPath.row] class] == [FacebookStatus class])
+    {
+        static NSString *statusCellIdentifier = @"Status";
+        FacebookView *cell = [tableView dequeueReusableCellWithIdentifier:statusCellIdentifier];
+        if (cell == nil) {
+            cell = [[FacebookView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:statusCellIdentifier];
+            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 50);
+            return cell;
+        }
+    }
+    
+    else if([[newArray objectAtIndex: indexPath.row] class] == [Tweet class])
+    {
+        static NSString *tweetCellIdentifier = @"Tweet";
+        
+        TwitterView *cell = [tableView dequeueReusableCellWithIdentifier:tweetCellIdentifier];
+        if (cell == nil) {
+            cell = [[TwitterView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tweetCellIdentifier];
+            cell.frame = CGRectMake(cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, 50);
+            return cell;
+        }
+    }
+
+    return nil; // Something crapped itself
+}
 @end

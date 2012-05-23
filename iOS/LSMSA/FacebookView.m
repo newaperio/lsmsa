@@ -10,8 +10,8 @@
 
 @implementation FacebookView
 
-@synthesize statusArray;
-@synthesize statusText;
+@synthesize facebookData = _facebookData;
+@synthesize statusText = _statusText;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -20,19 +20,6 @@
         // Initialization code
     }
     return self;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    static NSString *CellIdentifier = @"Status";
-    
-    FacebookView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[FacebookView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-
-    return cell;
 }
 
 @end

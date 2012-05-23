@@ -11,7 +11,7 @@
 
 @interface FacebookView : UITableViewCell
 
-@property (nonatomic, retain) NSArray *statusArray;
+@property (nonatomic, retain) FacebookStatus *facebookData;
 @property (nonatomic, retain) IBOutlet UILabel *statusText;
 
 @end

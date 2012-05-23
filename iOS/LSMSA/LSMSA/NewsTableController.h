@@ -10,6 +10,8 @@
 #import <RestKit/Restkit.h>
 #import "FacebookStatus.h"
 #import "Tweet.h"
+#import "FacebookView.h"
+#import "TwitterView.h"
 
 @interface NewsTableController : UITableViewController <RKObjectLoaderDelegate>
 {

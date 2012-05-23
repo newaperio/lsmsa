@@ -10,8 +10,8 @@
 
 @implementation TwitterView
 
-@synthesize tweetText;
-@synthesize tweetArray;
+@synthesize tweetText = _tweetText;
+@synthesize tweetData = _tweetData;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -22,17 +22,5 @@
     return self;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    static NSString *CellIdentifier = @"Tweet";
-    
-    TwitterView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[TwitterView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-
-    return cell;
-}
 
 @end
