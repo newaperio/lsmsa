@@ -11,7 +11,7 @@
 
 @interface TwitterView : UITableViewCell
 
-@property (nonatomic, retain) NSMutableArray *tweetArray;
+@property (nonatomic, retain) NSArray *tweetArray;
 @property (nonatomic, retain) IBOutlet UILabel *tweetText;
 
 @end

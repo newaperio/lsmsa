@@ -14,6 +14,7 @@ class ConcentrationsController < ApplicationController
   # GET /concentrations/1.json
   def show
     @concentration = Concentration.find(params[:id])
+    @prospies = @concentration.prospies.order("name").page(params[:page]).per(1)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -79,5 +80,9 @@ class ConcentrationsController < ApplicationController
       format.html { redirect_to concentrations_url }
       format.json { head :no_content }
     end
+  end
+  
+  def prospies
+  	@prospies = Prospy.find_all_by_concentration_id(params[:id])
   end
 end
