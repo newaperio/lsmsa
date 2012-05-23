@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11D50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
     <dependencies>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
@@ -22,7 +22,7 @@
                     </connections>
                 </tabBarController>
             </objects>
-            <point key="canvasLocation" x="132" y="180"/>
+            <point key="canvasLocation" x="-879" y="144"/>
         </scene>
         <scene sceneID="HI0-6o-EkO">
             <objects>
@@ -125,7 +125,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="64a-wo-ARh"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1001" y="180"/>
+            <point key="canvasLocation" x="-10" y="144"/>
         </scene>
         <scene sceneID="3V6-lR-Ygn">
             <objects>
@@ -154,7 +154,7 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1472" y="180"/>
+            <point key="canvasLocation" x="461" y="144"/>
         </scene>
         <scene sceneID="bUV-li-2AY">
             <objects>
@@ -174,6 +174,24 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ci6-aL-ohj">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gvs-Jb-zo1">
+                                <rect key="frame" x="0.0" y="110" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="eua-YF-sm3" id="rNu-f5-akq"/>
@@ -186,7 +204,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1001" y="-408"/>
+            <point key="canvasLocation" x="-10" y="-444"/>
         </scene>
         <scene sceneID="UQ0-3z-fBK">
             <objects>
@@ -227,7 +245,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="GSN-PO-D8O"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1001" y="764"/>
+            <point key="canvasLocation" x="-10" y="728"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -236,6 +254,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gEz-rn-pOf"/>
+        <segue reference="js7-uW-AnD"/>
     </inferredMetricsTieBreakers>
 </document>
