@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "Prospy.h"
 
-@interface InterestViewController : UIViewController
+@interface InterestViewController : UIViewController {
+    BOOL _keyboardIsShown;
+}
 
 @property (nonatomic, strong) IBOutlet UITextField *nameTextField;
 @property (nonatomic, strong) IBOutlet UITextField *emailTextField;
@@ -22,10 +24,12 @@
 @property (nonatomic, strong) IBOutlet UITextField *zipTextField;
 @property (nonatomic, strong) IBOutlet UITextField *concentrationTextField;
 @property (nonatomic, strong) IBOutlet UITextField *telephoneNumberTextField;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 
 
--(IBAction)sendPressed:(id)sender;
-
+- (IBAction)sendPressed:(id)sender;
+- (void)keyboardWillHide:(NSNotification *)notification;
+- (void)keyboardWillShow:(NSNotification *)notification;
 
 
 @end

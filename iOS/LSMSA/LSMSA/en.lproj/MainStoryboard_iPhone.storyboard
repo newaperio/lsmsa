@@ -157,6 +157,7 @@
                         <outlet property="emailTextField" destination="qtN-Nh-Cks" id="J9a-RJ-GMo"/>
                         <outlet property="gradYearTextField" destination="msp-bS-dW3" id="nLB-MF-hWT"/>
                         <outlet property="nameTextField" destination="cIO-TV-Vzk" id="U0d-sa-1dX"/>
+                        <outlet property="scrollView" destination="z6B-s4-9NO" id="8MU-Sz-POf"/>
                         <outlet property="stateTextField" destination="nTc-bI-lNP" id="97n-y8-Gob"/>
                         <outlet property="telephoneNumberTextField" destination="qaS-6V-dJF" id="oN2-BG-mrb"/>
                         <outlet property="zipTextField" destination="jbI-vI-cvK" id="dwv-m0-QpK"/>
@@ -429,6 +430,35 @@
         <image name="103-map.png" width="26" height="21"/>
         <image name="Graph Paper - iPhone.png" width="320" height="480"/>
     </resources>
+    <classes>
+        <class className="InterestViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InterestViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendPressed:"/>
+                <relationship kind="outlet" name="address1TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="address2TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="cityTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="concentrationTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="currentSchoolTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gradYearTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="stateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="telephoneNumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="zipTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="NewsTableController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsTableController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
