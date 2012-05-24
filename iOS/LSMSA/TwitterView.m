@@ -10,31 +10,25 @@
 
 @implementation TwitterView
 
-@synthesize tweetText = _text, tweetDate = _date, tweet = _tweet;
+@synthesize tweetText = _tweetText, tweetDate = _tweetDate, tweet = _tweet;
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        _tweet = [[Tweet alloc] init];
+        _tweetDate = [[UILabel alloc] init];
+        _tweetText = [[UILabel alloc] init];
     }
     return self;
 }
 
-
-    return cell;
-}
-
 -(void)setTweet:(Tweet *)tweet {
-    _tweet = tweet;
-    [self updateCell];
+    //_tweet = tweet;
+    _tweetText.text = _tweet.textBody;
+    _tweetDate.text = [NSString stringWithFormat:@"%@",[_tweet dateCreated]];
     
-}
-
--(void) updateCell;
-{
-    [_date setText: [_tweet textBody]];
-    [_date setText: [NSString stringWithFormat:@"%@",[_tweet dateCreated]]];
 }
 
 @end

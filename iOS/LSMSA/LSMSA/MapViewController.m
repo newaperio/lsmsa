@@ -103,7 +103,7 @@
     [super viewDidLoad];
     
     // 1
-    UIImage *image = [UIImage imageNamed:@"NSUMapSmall@2x.png"];
+    UIImage *image = [UIImage imageNamed:@"NSUMapSmall.png"];
     self.imageView = [[UIImageView alloc] initWithImage:image];
     self.imageView.frame = (CGRect){.origin=CGPointMake(0.0f, 0.0f), .size=image.size};
     [self.scrollView addSubview:self.imageView];

@@ -16,6 +16,4 @@
 @property (nonatomic, retain) IBOutlet UILabel *tweetDate;
 @property (nonatomic, retain) IBOutlet UILabel *tweetText;
 
--(void) updateCell;
-
 @end

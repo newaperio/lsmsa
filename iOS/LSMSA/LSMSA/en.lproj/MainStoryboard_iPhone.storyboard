@@ -340,20 +340,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="text" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="18" id="ds1-cl-o6k">
-                                            <rect key="frame" x="20" y="49" width="280" height="130"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
-                                            </userDefinedRuntimeAttributes>
-                                        </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="date" lineBreakMode="tailTruncation" minimumFontSize="10" id="W21-J0-zjN">
                                             <rect key="frame" x="20" y="20" width="280" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="text" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="18" id="ds1-cl-o6k">
+                                            <rect key="frame" x="20" y="49" width="280" height="130"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -393,6 +390,11 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <outlet property="statusDate" destination="BvJ-NL-8GF" id="pfS-Ga-Ez2"/>
+                                    <outlet property="statusImage" destination="k58-Iz-GfP" id="5ww-4v-cQa"/>
+                                    <outlet property="statusText" destination="Vdf-pn-7CH" id="kMf-Qt-hvp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -468,6 +470,8 @@
         <class className="FacebookView" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookView.h"/>
             <relationships>
+                <relationship kind="outlet" name="statusDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statusImage" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="statusText" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -498,6 +502,7 @@
         <class className="TwitterView" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterView.h"/>
             <relationships>
+                <relationship kind="outlet" name="tweetDate" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tweetText" candidateClass="UILabel"/>
             </relationships>
         </class>

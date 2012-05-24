@@ -12,41 +12,24 @@
 
 @synthesize statusText = _text, statusDate = _date, statusImage = _image, status = _status;
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithFrame:frame];
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         // Initialization code
+        _status = [[FacebookStatus alloc] init];
+        _date = [[UILabel alloc]init];
+        _text = [[UILabel alloc]init];
     }
     return self;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    static NSString *CellIdentifier = @"Status";
-    
-    FacebookView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[FacebookView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-
-    return cell;
-}
 
 -(void) setStatus:(FacebookStatus *)status
 {
     _status = status;
-    [self updateCell];
-}
-
--(void) updateCell
-{
     [_text setText:[_status message]];
-    [_date setText:[NSString strinWithFormat:@"%@",[_status dateCreated]]];
-    
-    
-    // todo: add image code
+    [_date setText:[NSString stringWithFormat:@"%@",[_status dateCreated]]];
 }
 
 @end

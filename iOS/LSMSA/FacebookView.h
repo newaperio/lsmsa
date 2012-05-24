@@ -17,6 +17,4 @@
 @property (nonatomic, retain) IBOutlet UILabel *statusDate;
 @property (nonatomic, retain) IBOutlet UIImageView *statusImage;
 
--(void) updateCell;
-
 @end
