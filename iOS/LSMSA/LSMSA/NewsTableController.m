@@ -170,9 +170,18 @@
         StatusTableViewCell *facebookCell = [tableView dequeueReusableCellWithIdentifier:statusCellIdentifier];
         if (facebookCell == nil) {
             facebookCell = [[StatusTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:statusCellIdentifier];
+            //facebookCell.thumb.layer.masksToBounds = YES;
+            //facebookCell.thumb.layer.frame = CGRectInset(facebookCell.thumb.layer.frame, 5, 5);
+            //facebookCell.thumb.layer.cornerRadius = 5.0;
+            facebookCell.statusLabel.delegate = self;
+            facebookCell.statusLabel.userInteractionEnabled = YES;
+            facebookCell.statusLabel.dataDetectorTypes = UIDataDetectorTypeLink | UIDataDetectorTypePhoneNumber;
+            facebookCell.statusLabel.backgroundColor = [UIColor clearColor];
+            //facebookCell.userLabel.backgroundColor = [UIColor clearColor];
+            facebookCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-        //facebookCell.frame = CGRectMake(facebookCell.frame.origin.x, facebookCell.frame.origin.y, facebookCell.frame.size.width, 50);
-        facebookCell.status = [_allUpdates objectAtIndex:indexPath.row];
+        FacebookStatus *status = [_allUpdates objectAtIndex:indexPath.row];
+        facebookCell.statusString = status.message;
         return facebookCell;
     } else if([[_allUpdates objectAtIndex: indexPath.row] class] == [Tweet class])
     {
@@ -207,6 +216,14 @@
             height = [TweetTableViewCell heightForCellWithText:[[_allUpdates objectAtIndex:indexPath.row] text] forWidth:235.0];
         } else if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
             height = [TweetTableViewCell heightForCellWithText:[[_allUpdates objectAtIndex:indexPath.row] text] forWidth:395.0];
+        }
+        return (height >= 70) ? height : 70;
+    } else if ([[_allUpdates objectAtIndex:indexPath.row] class] == [FacebookStatus class]) {
+        CGFloat height = 0.0;
+        if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+            height = [TweetTableViewCell heightForCellWithText:[[_allUpdates objectAtIndex:indexPath.row] message] forWidth:235.0];
+        } else if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+            height = [TweetTableViewCell heightForCellWithText:[[_allUpdates objectAtIndex:indexPath.row] message] forWidth:395.0];
         }
         return (height >= 70) ? height : 70;
     } else {

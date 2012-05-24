@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FacebookStatus.h"
+#import <QuartzCore/QuartzCore.h>
+#import "TTTAttributedLabel.h"
 
 @interface StatusTableViewCell : UITableViewCell
 
-@property (nonatomic, retain) FacebookStatus *status;
-
-@property (nonatomic, retain) IBOutlet UILabel *statusText;
-@property (nonatomic, retain) IBOutlet UILabel *statusDate;
-@property (nonatomic, retain) IBOutlet UIImageView *statusImage;
+@property (nonatomic, retain) TTTAttributedLabel *statusLabel;
+@property (nonatomic, retain) NSString *statusString;
+@property (nonatomic, retain) UILabel *statusDate;
+@property (nonatomic, retain) UIImageView *statusImage;
 
 @end
