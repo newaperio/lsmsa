@@ -39,6 +39,7 @@
 		20B9A2AE156EC4F400B29611 /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2AC156EC4F400B29611 /* TweetTableViewCell.m */; };
 		20B9A2D1156EE43600B29611 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A2CB156EE43600B29611 /* Localizable.strings */; };
 		20B9A2D2156EE43600B29611 /* NSDate+HumanizedTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2CF156EE43600B29611 /* NSDate+HumanizedTime.m */; };
+		20B9A2D5156EF27E00B29611 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2D4156EF27E00B29611 /* TPKeyboardAvoidingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
 		E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C68034156D926D00DD30B6 /* InterestViewController.m */; };
@@ -137,6 +138,8 @@
 		20B9A2CE156EE43600B29611 /* NSDate+HumanizedTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+HumanizedTime.h"; sourceTree = "<group>"; };
 		20B9A2CF156EE43600B29611 /* NSDate+HumanizedTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HumanizedTime.m"; sourceTree = "<group>"; };
 		20B9A2D0156EE43600B29611 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		20B9A2D3156EF27E00B29611 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		20B9A2D4156EF27E00B29611 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
 		E71AA225156DB024002776D7 /* Prospy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prospy.h; sourceTree = "<group>"; };
 		E71AA226156DB024002776D7 /* Prospy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prospy.m; sourceTree = "<group>"; };
 		E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Graph Paper - iPhone.png"; path = "../Graph Paper - iPhone.png"; sourceTree = "<group>"; };
@@ -296,6 +299,7 @@
 		20B9A29B156EBE9300B29611 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				20B9A2D6156EF2DB00B29611 /* TPKeyboardAvoidingScrollView.h */,
 				20B9A2CA156EE43600B29611 /* SEHumanizedTime */,
 				20B9A2A2156EC09700B29611 /* NSString+HTML */,
 				20B9A29E156EBED200B29611 /* TTTAttributedLabel */,
@@ -332,6 +336,15 @@
 				20B9A2CF156EE43600B29611 /* NSDate+HumanizedTime.m */,
 			);
 			path = SEHumanizedTime;
+			sourceTree = "<group>";
+		};
+		20B9A2D6156EF2DB00B29611 /* TPKeyboardAvoidingScrollView.h */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A2D3156EF27E00B29611 /* TPKeyboardAvoidingScrollView.h */,
+				20B9A2D4156EF27E00B29611 /* TPKeyboardAvoidingScrollView.m */,
+			);
+			name = TPKeyboardAvoidingScrollView.h;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +478,7 @@
 				20B9A2AD156EC4F400B29611 /* StatusTableViewCell.m in Sources */,
 				20B9A2AE156EC4F400B29611 /* TweetTableViewCell.m in Sources */,
 				20B9A2D2156EE43600B29611 /* NSDate+HumanizedTime.m in Sources */,
+				20B9A2D5156EF27E00B29611 /* TPKeyboardAvoidingScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
