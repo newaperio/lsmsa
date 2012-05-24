@@ -10,8 +10,8 @@
 
 @implementation InterestViewController
 
-@synthesize name = _name, email = _email, currentSchool = _currentSchool, gradYear = _gradYear, address1 = _address1, address2 = _address2, concentration = _concentration, telephoneNumber = _telephoneNumber;
-@synthesize city = _city, state = _state, zip = _zip;
+@synthesize nameTextField = _nameTextField, emailTextField = _emailTextField, currentSchoolTextField = _currentSchoolTextField, gradYearTextField = _gradYearTextField, address1TextField = _address1TextField, address2TextField = _address2TextField, concentrationTextField = _concentrationTextField, telephoneNumberTextField = _telephoneNumberTextField;
+@synthesize cityTextField = _cityTextField, stateTextField = _stateTextField, zipTextField = _zipTextField;
 //all the rest
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -52,19 +52,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)sendPressed:(id)sender {/*
-    Prospy *prospy = [[Prospy alloc]init];
-    prospy.name = self.name.text;
-    prospy.email = self.email.text;
-    prospy.gradYear = self.gradYear.text;
-    prospy.currentSchool = self.currentSchool.text;
-    prospy.address1 = self.address1.text;
-    prospy.address2 = self.address2.text;
-    prospy.city = self.city.text;
-    prospy.state = self.state.text;
-    prospy.telephoneNumber = self.telephoneNumber.text;
-    prospy.zip = self.zip.text;
-    prospy.concentration = self.concentration.text;*/
+- (void)sendPressed:(id)sender {
+    Prospy *prospy = [[Prospy alloc] init];
+    prospy.name = self.nameTextField.text;
+    prospy.email = self.emailTextField.text;
+    prospy.gradYear = self.gradYearTextField.text;
+    prospy.currentSchool = self.currentSchoolTextField.text;
+    prospy.address1 = self.address1TextField.text;
+    prospy.address2 = self.address2TextField.text;
+    prospy.city = self.cityTextField.text;
+    prospy.state = self.stateTextField.text;
+    prospy.telephoneNumber = self.telephoneNumberTextField.text;
+    prospy.zip = self.zipTextField.text;
+    prospy.concentration = self.concentrationTextField.text;
 }
 
 @end

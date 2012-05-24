@@ -7,20 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Prospy.h"
 
 @interface InterestViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UITextField *name;
-@property (nonatomic, retain) IBOutlet UITextField *email;
-@property (nonatomic, retain) IBOutlet UITextField *currentSchool;
-@property (nonatomic, retain) IBOutlet UITextField *gradYear;
-@property (nonatomic, retain) IBOutlet UITextField *address1;
-@property (nonatomic, retain) IBOutlet UITextField *address2;
-@property (nonatomic, retain) IBOutlet UITextField *city;
-@property (nonatomic, retain) IBOutlet UITextField *state;
-@property (nonatomic, retain) IBOutlet UITextField *zip;
-@property (nonatomic, retain) IBOutlet UITextField *concentration;
-@property (nonatomic, retain) IBOutlet UITextField *telephoneNumber;
+@property (nonatomic, retain) IBOutlet UITextField *nameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *emailTextField;
+@property (nonatomic, retain) IBOutlet UITextField *currentSchoolTextField;
+@property (nonatomic, retain) IBOutlet UITextField *gradYearTextField;
+@property (nonatomic, retain) IBOutlet UITextField *address1TextField;
+@property (nonatomic, retain) IBOutlet UITextField *address2TextField;
+@property (nonatomic, retain) IBOutlet UITextField *cityTextField;
+@property (nonatomic, retain) IBOutlet UITextField *stateTextField;
+@property (nonatomic, retain) IBOutlet UITextField *zipTextField;
+@property (nonatomic, retain) IBOutlet UITextField *concentrationTextField;
+@property (nonatomic, retain) IBOutlet UITextField *telephoneNumberTextField;
 
 
 -(IBAction)sendPressed:(id)sender;

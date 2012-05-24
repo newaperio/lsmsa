@@ -32,6 +32,7 @@
 		20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1BD156BE07200B29611 /* AppDelegate.m */; };
 		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
 		20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A25D156D9B8B00B29611 /* MapViewController.m */; };
+		20B9A27C156EBCE900B29611 /* Prospy.m in Sources */ = {isa = PBXBuildFile; fileRef = E71AA226156DB024002776D7 /* Prospy.m */; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
 		E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C68034156D926D00DD30B6 /* InterestViewController.m */; };
@@ -361,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B9A27C156EBCE900B29611 /* Prospy.m in Sources */,
 				18E7EF87156DC3B9008A0290 /* NewsTableController.m in Sources */,
 				20B9A1BA156BE07200B29611 /* main.m in Sources */,
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
