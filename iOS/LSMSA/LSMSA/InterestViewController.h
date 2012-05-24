@@ -11,17 +11,17 @@
 
 @interface InterestViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UITextField *nameTextField;
-@property (nonatomic, retain) IBOutlet UITextField *emailTextField;
-@property (nonatomic, retain) IBOutlet UITextField *currentSchoolTextField;
-@property (nonatomic, retain) IBOutlet UITextField *gradYearTextField;
-@property (nonatomic, retain) IBOutlet UITextField *address1TextField;
-@property (nonatomic, retain) IBOutlet UITextField *address2TextField;
-@property (nonatomic, retain) IBOutlet UITextField *cityTextField;
-@property (nonatomic, retain) IBOutlet UITextField *stateTextField;
-@property (nonatomic, retain) IBOutlet UITextField *zipTextField;
-@property (nonatomic, retain) IBOutlet UITextField *concentrationTextField;
-@property (nonatomic, retain) IBOutlet UITextField *telephoneNumberTextField;
+@property (nonatomic, strong) IBOutlet UITextField *nameTextField;
+@property (nonatomic, strong) IBOutlet UITextField *emailTextField;
+@property (nonatomic, strong) IBOutlet UITextField *currentSchoolTextField;
+@property (nonatomic, strong) IBOutlet UITextField *gradYearTextField;
+@property (nonatomic, strong) IBOutlet UITextField *address1TextField;
+@property (nonatomic, strong) IBOutlet UITextField *address2TextField;
+@property (nonatomic, strong) IBOutlet UITextField *cityTextField;
+@property (nonatomic, strong) IBOutlet UITextField *stateTextField;
+@property (nonatomic, strong) IBOutlet UITextField *zipTextField;
+@property (nonatomic, strong) IBOutlet UITextField *concentrationTextField;
+@property (nonatomic, strong) IBOutlet UITextField *telephoneNumberTextField;
 
 
 -(IBAction)sendPressed:(id)sender;

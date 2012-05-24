@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 NewAperio. All rights reserved.
 //
 
-#import "FacebookView.h"
+#import "StatusTableViewCell.h"
 
-@implementation FacebookView
+@implementation StatusTableViewCell
 
 @synthesize statusText = _text, statusDate = _date, statusImage = _image, status = _status;
 
@@ -29,7 +29,7 @@
 {
     _status = status;
     [_text setText:[_status message]];
-    [_date setText:[NSString stringWithFormat:@"%@",[_status dateCreated]]];
+    [_date setText:[NSString stringWithFormat:@"%@",[_status createdAt]]];
 }
 
 @end

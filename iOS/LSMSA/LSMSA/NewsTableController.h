@@ -10,17 +10,18 @@
 #import <RestKit/Restkit.h>
 #import "FacebookStatus.h"
 #import "Tweet.h"
-#import "FacebookView.h"
-#import "TwitterView.h"
+#import "StatusTableViewCell.h"
+#import "TweetTableViewCell.h"
+#import "TTTAttributedLabel.h"
 
-@interface NewsTableController : UITableViewController <RKObjectLoaderDelegate> {
+@interface NewsTableController : UITableViewController <RKObjectLoaderDelegate, TTTAttributedLabelDelegate, UIActionSheetDelegate> {
     NSArray* _tweets;
     NSArray* _facebookStatuses;
-    NSMutableArray* newArray;
+    NSMutableArray* _allUpdates;
 }
 
 -(void) loadTwitterContent;
 -(void) loadFacebookContent;
--(void) sortTheDataFromTheStuffWeGotFromJsonInAPinchThankYouNSArrayForGivingUsGoodFunctionsNotLikeThis;
+-(void) sortAndCombineUpdates;
 
 @end

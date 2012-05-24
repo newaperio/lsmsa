@@ -84,7 +84,7 @@
     }
     if([[NSString stringWithFormat:@"%@", [[objects objectAtIndex:0] class]] isEqualToString: @"Tweet"]) {
         _tweets = objects;
-        [self sortTheDataFromTheStuffWeGotFromJsonInAPinchThankYouNSArrayForGivingUsGoodFunctionsNotLikeThis];
+        [self sortAndCombineUpdates];
         [self.tableView reloadData];
     }
 }
@@ -100,7 +100,7 @@
     RKObjectMapping* statusMapping = [RKObjectMapping mappingForClass:[FacebookStatus class]];
     [statusMapping mapKeyPath:@"message" toAttribute:@"message"];
     [statusMapping mapKeyPath:@"picture" toAttribute:@"imageURL"];
-    [statusMapping mapKeyPath:@"created_time" toAttribute:@"dateCreated"];
+    [statusMapping mapKeyPath:@"created_time" toAttribute:@"createdAt"];
     [facebookObjectManager.mappingProvider setMapping:statusMapping forKeyPath:@"data"];
     [facebookObjectManager loadObjectsAtResourcePath:@"" delegate:self];
 }
@@ -113,8 +113,10 @@
     [RKObjectManager setSharedManager:twitterObjectManager];
     
     RKObjectMapping* tweetMapping = [RKObjectMapping mappingForClass:[Tweet class]];
-    [tweetMapping mapKeyPath:@"text" toAttribute:@"textBody"];
-    [tweetMapping mapKeyPath:@"created_at" toAttribute:@"dateCreated"];
+    [tweetMapping mapKeyPath:@"text" toAttribute:@"text"];
+    [tweetMapping mapKeyPath:@"created_at" toAttribute:@"createdAt"];
+    [tweetMapping mapKeyPath:@"user.profile_image_url" toAttribute:@"profileImageUrlString"];
+    [tweetMapping mapKeyPath:@"user.name" toAttribute:@"fromUser"];
     
     [RKObjectMapping addDefaultDateFormatterForString:@"E MMM d HH:mm:ss Z y" inTimeZone:nil];
     
@@ -128,7 +130,7 @@
     }];
 }
 
--(void)sortTheDataFromTheStuffWeGotFromJsonInAPinchThankYouNSArrayForGivingUsGoodFunctionsNotLikeThis
+-(void)sortAndCombineUpdates
 {
     NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
     for (Tweet* tweet in _tweets) {
@@ -138,9 +140,9 @@
         [tmpArray addObject:status];
     }
     
-    newArray = [NSMutableArray arrayWithArray:[tmpArray sortedArrayUsingComparator:^(id a, id b) {
-        NSDate *first = [a dateCreated];
-        NSDate *second = [b dateCreated];
+    _allUpdates = [NSMutableArray arrayWithArray:[tmpArray sortedArrayUsingComparator:^(id a, id b) {
+        NSDate *first = [a createdAt];
+        NSDate *second = [b createdAt];
         return [second compare:first];
     }] ];
 }
@@ -154,7 +156,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [newArray count];
+    return [_allUpdates count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -163,25 +165,34 @@
     
     static NSString *tweetCellIdentifier = @"Tweet";
     
-    if([[newArray objectAtIndex: indexPath.row] class] == [FacebookStatus class])
+    if([[_allUpdates objectAtIndex: indexPath.row] class] == [FacebookStatus class])
     {
-        FacebookView *facebookCell = [tableView dequeueReusableCellWithIdentifier:statusCellIdentifier];
+        StatusTableViewCell *facebookCell = [tableView dequeueReusableCellWithIdentifier:statusCellIdentifier];
         if (facebookCell == nil) {
-            facebookCell = [[FacebookView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:statusCellIdentifier];
+            facebookCell = [[StatusTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:statusCellIdentifier];
         }
         //facebookCell.frame = CGRectMake(facebookCell.frame.origin.x, facebookCell.frame.origin.y, facebookCell.frame.size.width, 50);
-        facebookCell.status = [newArray objectAtIndex:indexPath.row];
+        facebookCell.status = [_allUpdates objectAtIndex:indexPath.row];
         return facebookCell;
-    } else if([[newArray objectAtIndex: indexPath.row] class] == [Tweet class])
+    } else if([[_allUpdates objectAtIndex: indexPath.row] class] == [Tweet class])
     {
-        TwitterView *twitterCell = [self.tableView dequeueReusableCellWithIdentifier:tweetCellIdentifier];
+        TweetTableViewCell *twitterCell = [self.tableView dequeueReusableCellWithIdentifier:tweetCellIdentifier];
         if (twitterCell == nil) {
-            twitterCell = [[TwitterView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tweetCellIdentifier];
+            twitterCell = [[TweetTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tweetCellIdentifier];
+            twitterCell.thumb.layer.masksToBounds = YES;
+            twitterCell.thumb.layer.frame = CGRectInset(twitterCell.thumb.layer.frame, 5, 5);
+            twitterCell.thumb.layer.cornerRadius = 5.0;
+            twitterCell.tweetLabel.delegate = self;
+            twitterCell.tweetLabel.userInteractionEnabled = YES;
+            twitterCell.tweetLabel.dataDetectorTypes = UIDataDetectorTypeLink | UIDataDetectorTypePhoneNumber;
+            twitterCell.tweetLabel.backgroundColor = [UIColor clearColor];
+            twitterCell.userLabel.backgroundColor = [UIColor clearColor];
+            twitterCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-        //twitterCell.frame = CGRectMake(twitterCell.frame.origin.x, twitterCell.frame.origin.y, twitterCell.frame.size.width, 50);
-        Tweet *tweet = [newArray objectAtIndex:indexPath.row];
-        twitterCell.tweetDate.text = [NSString stringWithFormat:@"%@", tweet.dateCreated];
-        twitterCell.tweetText.text = tweet.textBody;
+        Tweet *tweet= [_allUpdates objectAtIndex:indexPath.row];
+        twitterCell.thumb.image = [UIImage imageWithContentsOfFile:tweet.profileImageUrlString];
+        twitterCell.userLabel.text = tweet.fromUser;
+        twitterCell.tweetString = tweet.text;
         return twitterCell;
     }
     
@@ -190,7 +201,32 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 200;
+    if ([[_allUpdates objectAtIndex:indexPath.row] class] == [Tweet class]) {
+        CGFloat height = 0.0;
+        if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
+            height = [TweetTableViewCell heightForCellWithText:[[_allUpdates objectAtIndex:indexPath.row] text] forWidth:235.0];
+        } else if (UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) {
+            height = [TweetTableViewCell heightForCellWithText:[[_allUpdates objectAtIndex:indexPath.row] text] forWidth:395.0];
+        }
+        return (height >= 70) ? height : 70;
+    } else {
+        return 70;
+    }
+}
+
+#pragma mark - TTTAttributedLabelDelegate
+
+- (void)attributedLabel:(TTTAttributedLabel *)label didSelectLinkWithURL:(NSURL *)url {
+    [[[UIActionSheet alloc] initWithTitle:[url absoluteString] delegate:self cancelButtonTitle:NSLocalizedString(@"Cancel", nil) destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"Open in Link Safari", nil), nil] showFromTabBar:self.tabBarController.tabBar];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == actionSheet.cancelButtonIndex) {
+        return;
+    }
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:actionSheet.title]];
 }
 
 /*

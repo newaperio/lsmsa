@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1811F6C3156C29E0000CF478 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811F6C2156C29E0000CF478 /* CFNetwork.framework */; };
-		184000F5156D2B3600460230 /* FacebookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184000F4156D2B3600460230 /* FacebookView.m */; };
-		184000F8156D2B5800460230 /* TwitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184000F7156D2B5800460230 /* TwitterView.m */; };
 		18665DA6156BEE47000A9740 /* FacebookStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665DA5156BEE47000A9740 /* FacebookStatus.m */; };
 		18665DD3156BF748000A9740 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DC8156BF63A000A9740 /* libRestKit.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		18665DDA156BF7CC000A9740 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD4156BF7CC000A9740 /* CoreData.framework */; };
@@ -33,6 +31,12 @@
 		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
 		20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A25D156D9B8B00B29611 /* MapViewController.m */; };
 		20B9A27C156EBCE900B29611 /* Prospy.m in Sources */ = {isa = PBXBuildFile; fileRef = E71AA226156DB024002776D7 /* Prospy.m */; };
+		20B9A29D156EBEC300B29611 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A29C156EBEC300B29611 /* CoreText.framework */; };
+		20B9A2A1156EBF0100B29611 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2A0156EBF0100B29611 /* TTTAttributedLabel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		20B9A2A7156EC0A800B29611 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2A4156EC0A800B29611 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		20B9A2A8156EC0A800B29611 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2A6156EC0A800B29611 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		20B9A2AD156EC4F400B29611 /* StatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2AA156EC4F400B29611 /* StatusTableViewCell.m */; };
+		20B9A2AE156EC4F400B29611 /* TweetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A2AC156EC4F400B29611 /* TweetTableViewCell.m */; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
 		E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C68034156D926D00DD30B6 /* InterestViewController.m */; };
@@ -85,10 +89,6 @@
 
 /* Begin PBXFileReference section */
 		1811F6C2156C29E0000CF478 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		184000F3156D2B3600460230 /* FacebookView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FacebookView.h; path = ../FacebookView.h; sourceTree = "<group>"; };
-		184000F4156D2B3600460230 /* FacebookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookView.m; path = ../FacebookView.m; sourceTree = "<group>"; };
-		184000F6156D2B5800460230 /* TwitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterView.h; path = ../TwitterView.h; sourceTree = "<group>"; };
-		184000F7156D2B5800460230 /* TwitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterView.m; path = ../TwitterView.m; sourceTree = "<group>"; };
 		18665DA4156BEE47000A9740 /* FacebookStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookStatus.h; sourceTree = "<group>"; };
 		18665DA5156BEE47000A9740 /* FacebookStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStatus.m; sourceTree = "<group>"; };
 		18665DBC156BF63A000A9740 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = LSMSA/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
@@ -119,6 +119,17 @@
 		20B9A1C0156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		20B9A25C156D9B8B00B29611 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		20B9A25D156D9B8B00B29611 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		20B9A29C156EBEC300B29611 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		20B9A29F156EBF0100B29611 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		20B9A2A0156EBF0100B29611 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
+		20B9A2A3156EC0A800B29611 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		20B9A2A4156EC0A800B29611 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		20B9A2A5156EC0A800B29611 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		20B9A2A6156EC0A800B29611 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		20B9A2A9156EC4F400B29611 /* StatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTableViewCell.h; sourceTree = "<group>"; };
+		20B9A2AA156EC4F400B29611 /* StatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTableViewCell.m; sourceTree = "<group>"; };
+		20B9A2AB156EC4F400B29611 /* TweetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetTableViewCell.h; sourceTree = "<group>"; };
+		20B9A2AC156EC4F400B29611 /* TweetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetTableViewCell.m; sourceTree = "<group>"; };
 		E71AA225156DB024002776D7 /* Prospy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prospy.h; sourceTree = "<group>"; };
 		E71AA226156DB024002776D7 /* Prospy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prospy.m; sourceTree = "<group>"; };
 		E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Graph Paper - iPhone.png"; path = "../Graph Paper - iPhone.png"; sourceTree = "<group>"; };
@@ -132,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B9A29D156EBEC300B29611 /* CoreText.framework in Frameworks */,
 				1811F6C3156C29E0000CF478 /* CFNetwork.framework in Frameworks */,
 				18665DDA156BF7CC000A9740 /* CoreData.framework in Frameworks */,
 				18665DDB156BF7CC000A9740 /* libxml2.dylib in Frameworks */,
@@ -156,12 +168,8 @@
 				18665DA5156BEE47000A9740 /* FacebookStatus.m */,
 				187BEB8C156C1B9B006810C5 /* Tweet.h */,
 				187BEB8D156C1B9B006810C5 /* Tweet.m */,
-				184000F6156D2B5800460230 /* TwitterView.h */,
 				E71AA225156DB024002776D7 /* Prospy.h */,
 				E71AA226156DB024002776D7 /* Prospy.m */,
-				184000F7156D2B5800460230 /* TwitterView.m */,
-				184000F3156D2B3600460230 /* FacebookView.h */,
-				184000F4156D2B3600460230 /* FacebookView.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				20B9A1B3156BE07200B29611 /* LSMSA */,
+				20B9A29B156EBE9300B29611 /* Vendor */,
 				20B9A1AC156BE07200B29611 /* Frameworks */,
 				20B9A1AA156BE07200B29611 /* Products */,
 			);
@@ -199,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				18665DBC156BF63A000A9740 /* RestKit.xcodeproj */,
+				20B9A29C156EBEC300B29611 /* CoreText.framework */,
 				1811F6C2156C29E0000CF478 /* CFNetwork.framework */,
 				18665DD4156BF7CC000A9740 /* CoreData.framework */,
 				18665DD5156BF7CC000A9740 /* libxml2.dylib */,
@@ -267,9 +277,43 @@
 		20B9A27F156EBD5B00B29611 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20B9A2A9156EC4F400B29611 /* StatusTableViewCell.h */,
+				20B9A2AA156EC4F400B29611 /* StatusTableViewCell.m */,
+				20B9A2AB156EC4F400B29611 /* TweetTableViewCell.h */,
+				20B9A2AC156EC4F400B29611 /* TweetTableViewCell.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		20B9A29B156EBE9300B29611 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A2A2156EC09700B29611 /* NSString+HTML */,
+				20B9A29E156EBED200B29611 /* TTTAttributedLabel */,
+			);
+			name = Vendor;
+			path = LSMSA;
+			sourceTree = "<group>";
+		};
+		20B9A29E156EBED200B29611 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A29F156EBF0100B29611 /* TTTAttributedLabel.h */,
+				20B9A2A0156EBF0100B29611 /* TTTAttributedLabel.m */,
+			);
+			name = TTTAttributedLabel;
+			sourceTree = "<group>";
+		};
+		20B9A2A2156EC09700B29611 /* NSString+HTML */ = {
+			isa = PBXGroup;
+			children = (
+				20B9A2A3156EC0A800B29611 /* GTMNSString+HTML.h */,
+				20B9A2A4156EC0A800B29611 /* GTMNSString+HTML.m */,
+				20B9A2A5156EC0A800B29611 /* NSString+HTML.h */,
+				20B9A2A6156EC0A800B29611 /* NSString+HTML.m */,
+			);
+			name = "NSString+HTML";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,10 +436,13 @@
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
 				18665DA6156BEE47000A9740 /* FacebookStatus.m in Sources */,
 				187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */,
-				184000F5156D2B3600460230 /* FacebookView.m in Sources */,
-				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
 				E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */,
 				20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */,
+				20B9A2A1156EBF0100B29611 /* TTTAttributedLabel.m in Sources */,
+				20B9A2A7156EC0A800B29611 /* GTMNSString+HTML.m in Sources */,
+				20B9A2A8156EC0A800B29611 /* NSString+HTML.m in Sources */,
+				20B9A2AD156EC4F400B29611 /* StatusTableViewCell.m in Sources */,
+				20B9A2AE156EC4F400B29611 /* TweetTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

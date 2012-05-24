@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FacebookStatus.h"
 
-@interface FacebookView : UITableViewCell
+@interface StatusTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) FacebookStatus *status;
 
