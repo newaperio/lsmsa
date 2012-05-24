@@ -53,7 +53,18 @@
 }
 
 - (void)sendPressed:(id)sender {
-    
+    Prospy *prospy = [[Prospy alloc]init];
+    prospy.name = self.name.text;
+    prospy.email = self.email.text;
+    prospy.gradYear = self.gradYear.text;
+    prospy.currentSchool = self.currentSchool.text;
+    prospy.address1 = self.address1.text;
+    prospy.address2 = self.address2.text;
+    prospy.city = self.city.text;
+    prospy.state = self.state.text;
+    prospy.telephoneNumber = self.telephoneNumber.text;
+    prospy.zip = self.zip.text;
+    prospy.concentration = self.concentration.text;
 }
 
 @end

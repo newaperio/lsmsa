@@ -28,6 +28,7 @@
 		20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1BD156BE07200B29611 /* AppDelegate.m */; };
 		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
 		20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A25D156D9B8B00B29611 /* MapViewController.m */; };
+		E71AA227156DB024002776D7 /* Prospy.m in Sources */ = {isa = PBXBuildFile; fileRef = E71AA226156DB024002776D7 /* Prospy.m */; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
 		E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C68034156D926D00DD30B6 /* InterestViewController.m */; };
@@ -110,6 +111,8 @@
 		20B9A1C0156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		20B9A25C156D9B8B00B29611 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		20B9A25D156D9B8B00B29611 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E71AA225156DB024002776D7 /* Prospy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prospy.h; sourceTree = "<group>"; };
+		E71AA226156DB024002776D7 /* Prospy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prospy.m; sourceTree = "<group>"; };
 		E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone.png"; sourceTree = "<group>"; };
 		E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone@2x.png"; sourceTree = "<group>"; };
 		E7C68033156D926D00DD30B6 /* InterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				187BEB8C156C1B9B006810C5 /* Tweet.h */,
 				187BEB8D156C1B9B006810C5 /* Tweet.m */,
 				184000F6156D2B5800460230 /* TwitterView.h */,
+				E71AA225156DB024002776D7 /* Prospy.h */,
+				E71AA226156DB024002776D7 /* Prospy.m */,
 				184000F7156D2B5800460230 /* TwitterView.m */,
 				184000F3156D2B3600460230 /* FacebookView.h */,
 				184000F4156D2B3600460230 /* FacebookView.m */,
@@ -350,6 +355,7 @@
 				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
 				E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */,
 				20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */,
+				E71AA227156DB024002776D7 /* Prospy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
