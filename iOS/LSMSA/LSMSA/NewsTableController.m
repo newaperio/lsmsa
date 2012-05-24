@@ -170,18 +170,20 @@
         StatusTableViewCell *facebookCell = [tableView dequeueReusableCellWithIdentifier:statusCellIdentifier];
         if (facebookCell == nil) {
             facebookCell = [[StatusTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:statusCellIdentifier];
-            //facebookCell.thumb.layer.masksToBounds = YES;
-            //facebookCell.thumb.layer.frame = CGRectInset(facebookCell.thumb.layer.frame, 5, 5);
-            //facebookCell.thumb.layer.cornerRadius = 5.0;
+            facebookCell.statusImage.layer.masksToBounds = YES;
+            facebookCell.statusImage.layer.frame = CGRectInset(facebookCell.statusImage.layer.frame, 5, 5);
+            facebookCell.statusImage.layer.cornerRadius = 5.0;
             facebookCell.statusLabel.delegate = self;
             facebookCell.statusLabel.userInteractionEnabled = YES;
             facebookCell.statusLabel.dataDetectorTypes = UIDataDetectorTypeLink | UIDataDetectorTypePhoneNumber;
             facebookCell.statusLabel.backgroundColor = [UIColor clearColor];
-            //facebookCell.userLabel.backgroundColor = [UIColor clearColor];
+            facebookCell.statusDate.backgroundColor = [UIColor clearColor];
             facebookCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         FacebookStatus *status = [_allUpdates objectAtIndex:indexPath.row];
         facebookCell.statusString = status.message;
+        facebookCell.statusDate.text = [NSString stringWithFormat:@"%@ on facebook", [status.createdAt stringWithHumanizedTimeDifference]];
+        facebookCell.statusImage.image = [UIImage imageWithContentsOfFile:status.imageURL];
         return facebookCell;
     } else if([[_allUpdates objectAtIndex: indexPath.row] class] == [Tweet class])
     {
@@ -195,12 +197,12 @@
             twitterCell.tweetLabel.userInteractionEnabled = YES;
             twitterCell.tweetLabel.dataDetectorTypes = UIDataDetectorTypeLink | UIDataDetectorTypePhoneNumber;
             twitterCell.tweetLabel.backgroundColor = [UIColor clearColor];
-            twitterCell.userLabel.backgroundColor = [UIColor clearColor];
+            twitterCell.timeLabel.backgroundColor = [UIColor clearColor];
             twitterCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         Tweet *tweet= [_allUpdates objectAtIndex:indexPath.row];
         twitterCell.thumb.image = [UIImage imageWithContentsOfFile:tweet.profileImageUrlString];
-        twitterCell.userLabel.text = tweet.fromUser;
+        twitterCell.timeLabel.text = [NSString stringWithFormat:@"%@ on twitter", [tweet.createdAt stringWithHumanizedTimeDifference]];
         twitterCell.tweetString = tweet.text;
         return twitterCell;
     }

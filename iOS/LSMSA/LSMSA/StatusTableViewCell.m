@@ -37,20 +37,19 @@ static CGFloat const kStatusTextFontSize = 12;
         _statusLabel.linkAttributes = [NSDictionary dictionaryWithDictionary:mutableLinkAttributes];
         
         [self addSubview:_statusLabel];
-        /*
-        //user label
-        _userLabel = [[UILabel alloc] initWithFrame:CGRectMake(78, 0, 222, 20)];
-        _userLabel.font = [UIFont boldSystemFontOfSize:14];
-        _userLabel.textColor = [UIColor blackColor];
-        _userLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [self addSubview:_userLabel];
+        
+        //time label
+        _statusDate = [[UILabel alloc] initWithFrame:CGRectMake(78, 0, 222, 20)];
+        _statusDate.font = [UIFont boldSystemFontOfSize:14];
+        _statusDate.textColor = [UIColor blackColor];
+        _statusDate.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [self addSubview:_statusDate];
         
         //thumbnail
-        _thumb = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
-        _thumb.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-        [self addSubview:_thumb];
-         */
-        
+        _statusImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
+        _statusImage.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+        [self addSubview:_statusImage];
+
         self.clipsToBounds = YES;
     }
     return self;

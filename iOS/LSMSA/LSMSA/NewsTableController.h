@@ -13,6 +13,7 @@
 #import "StatusTableViewCell.h"
 #import "TweetTableViewCell.h"
 #import "TTTAttributedLabel.h"
+#import "NSDate+HumanizedTime.h"
 
 @interface NewsTableController : UITableViewController <RKObjectLoaderDelegate, TTTAttributedLabelDelegate, UIActionSheetDelegate> {
     NSArray* _tweets;

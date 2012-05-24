@@ -35,10 +35,5 @@
     [imageData writeToFile:path atomically:NO];
     _profileImageUrlString = path;
 }
-/*
-- (void)setText:(NSString *)text {
-    NSString *parsedText = [text stringByDecodingHTMLEntities];
-    _text = parsedText;
-}*/
 
 @end

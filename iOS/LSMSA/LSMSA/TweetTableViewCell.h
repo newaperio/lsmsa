@@ -12,13 +12,13 @@
 
 @interface TweetTableViewCell : UITableViewCell {
     UIImageView *_thumb;
-    UILabel *_userLabel;
+    UILabel *_timeLabel;
     TTTAttributedLabel *_tweetLabel;
     NSString *_tweetString;
 }
 
 @property (nonatomic, strong) UIImageView *thumb;
-@property (nonatomic, strong) UILabel *userLabel;
+@property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) TTTAttributedLabel *tweetLabel;
 @property (nonatomic, copy) NSString *tweetString;
 

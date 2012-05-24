@@ -30,7 +30,7 @@ static inline NSRegularExpression * UserRegularExpression() {
 
 @implementation TweetTableViewCell
 
-@synthesize thumb = _thumb, userLabel = _userLabel, tweetLabel = _tweetLabel, tweetString = _tweetString;
+@synthesize thumb = _thumb, timeLabel = _timeLabel, tweetLabel = _tweetLabel, tweetString = _tweetString;
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -57,11 +57,11 @@ static inline NSRegularExpression * UserRegularExpression() {
         [self addSubview:_tweetLabel];
         
         //user label
-        _userLabel = [[UILabel alloc] initWithFrame:CGRectMake(78, 0, 222, 20)];
-        _userLabel.font = [UIFont boldSystemFontOfSize:14];
-        _userLabel.textColor = [UIColor blackColor];
-        _userLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [self addSubview:_userLabel];
+        _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(78, 0, 222, 20)];
+        _timeLabel.font = [UIFont boldSystemFontOfSize:14];
+        _timeLabel.textColor = [UIColor blackColor];
+        _timeLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [self addSubview:_timeLabel];
         
         //thumbnail
         _thumb = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
