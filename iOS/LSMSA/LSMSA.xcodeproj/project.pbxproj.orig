@@ -10,7 +10,6 @@
 		1811F6C3156C29E0000CF478 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811F6C2156C29E0000CF478 /* CFNetwork.framework */; };
 		184000F5156D2B3600460230 /* FacebookView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184000F4156D2B3600460230 /* FacebookView.m */; };
 		184000F8156D2B5800460230 /* TwitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184000F7156D2B5800460230 /* TwitterView.m */; };
-		18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665D98156BE67E000A9740 /* NewsTableController.m */; };
 		18665DA6156BEE47000A9740 /* FacebookStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 18665DA5156BEE47000A9740 /* FacebookStatus.m */; };
 		18665DD3156BF748000A9740 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DC8156BF63A000A9740 /* libRestKit.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		18665DDA156BF7CC000A9740 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD4156BF7CC000A9740 /* CoreData.framework */; };
@@ -20,7 +19,11 @@
 		18665DDE156BF7CC000A9740 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD8156BF7CC000A9740 /* Security.framework */; };
 		18665DDF156BF7CC000A9740 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18665DD9156BF7CC000A9740 /* SystemConfiguration.framework */; };
 		187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 187BEB8D156C1B9B006810C5 /* Tweet.m */; };
-		18B69AF5156D40BA007728AB /* Reference.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B69AF4156D40BA007728AB /* Reference.m */; };
+		18E7EF57156DB956008A0290 /* NewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7EF56156DB956008A0290 /* NewsTableController.m */; };
+		18E7EF67156DC1AB008A0290 /* NSUMapSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E7EF65156DC1AB008A0290 /* NSUMapSmall.png */; };
+		18E7EF68156DC1AB008A0290 /* NSUMapSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E7EF66156DC1AB008A0290 /* NSUMapSmall@2x.png */; };
+		18E7EF6B156DC236008A0290 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E7EF69156DC236008A0290 /* 103-map.png */; };
+		18E7EF6C156DC236008A0290 /* 103-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E7EF6A156DC236008A0290 /* 103-map@2x.png */; };
 		20B9A1AE156BE07200B29611 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AD156BE07200B29611 /* UIKit.framework */; };
 		20B9A1B0156BE07200B29611 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AF156BE07200B29611 /* Foundation.framework */; };
 		20B9A1B2156BE07200B29611 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1B1156BE07200B29611 /* CoreGraphics.framework */; };
@@ -28,14 +31,11 @@
 		20B9A1BA156BE07200B29611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1B9156BE07200B29611 /* main.m */; };
 		20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A1BD156BE07200B29611 /* AppDelegate.m */; };
 		20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */; };
-<<<<<<< Updated upstream
+		20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B9A25D156D9B8B00B29611 /* MapViewController.m */; };
+		E71AA227156DB024002776D7 /* Prospy.m in Sources */ = {isa = PBXBuildFile; fileRef = E71AA226156DB024002776D7 /* Prospy.m */; };
 		E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */; };
 		E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */; };
-=======
-		E74840A0156D33C9001368ED /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = E748409F156D33C9001368ED /* Map.m */; };
-		E74840A2156D3D99001368ED /* 71-compass.png in Resources */ = {isa = PBXBuildFile; fileRef = E74840A1156D3D99001368ED /* 71-compass.png */; };
-		E7F708C9156D3F03007EC066 /* NSUMap002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E7F708C8156D3F03007EC066 /* NSUMap002.jpg */; };
->>>>>>> Stashed changes
+		E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C68034156D926D00DD30B6 /* InterestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,8 +89,6 @@
 		184000F4156D2B3600460230 /* FacebookView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FacebookView.m; path = ../FacebookView.m; sourceTree = "<group>"; };
 		184000F6156D2B5800460230 /* TwitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TwitterView.h; path = ../TwitterView.h; sourceTree = "<group>"; };
 		184000F7156D2B5800460230 /* TwitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TwitterView.m; path = ../TwitterView.m; sourceTree = "<group>"; };
-		18665D97156BE67E000A9740 /* NewsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableController.h; sourceTree = "<group>"; };
-		18665D98156BE67E000A9740 /* NewsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableController.m; sourceTree = "<group>"; };
 		18665DA4156BEE47000A9740 /* FacebookStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookStatus.h; sourceTree = "<group>"; };
 		18665DA5156BEE47000A9740 /* FacebookStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookStatus.m; sourceTree = "<group>"; };
 		18665DBC156BF63A000A9740 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = LSMSA/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
@@ -102,8 +100,12 @@
 		18665DD9156BF7CC000A9740 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		187BEB8C156C1B9B006810C5 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		187BEB8D156C1B9B006810C5 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
-		18B69AF3156D40BA007728AB /* Reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reference.h; sourceTree = "<group>"; };
-		18B69AF4156D40BA007728AB /* Reference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reference.m; sourceTree = "<group>"; };
+		18E7EF55156DB956008A0290 /* NewsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableController.h; sourceTree = "<group>"; };
+		18E7EF56156DB956008A0290 /* NewsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableController.m; sourceTree = "<group>"; };
+		18E7EF65156DC1AB008A0290 /* NSUMapSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NSUMapSmall.png; sourceTree = "<group>"; };
+		18E7EF66156DC1AB008A0290 /* NSUMapSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSUMapSmall@2x.png"; sourceTree = "<group>"; };
+		18E7EF69156DC236008A0290 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
+		18E7EF6A156DC236008A0290 /* 103-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map@2x.png"; sourceTree = "<group>"; };
 		20B9A1A9156BE07200B29611 /* LSMSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSMSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B9A1AD156BE07200B29611 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20B9A1AF156BE07200B29611 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,15 +117,14 @@
 		20B9A1BC156BE07200B29611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20B9A1BD156BE07200B29611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20B9A1C0156BE07200B29611 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-<<<<<<< Updated upstream
+		20B9A25C156D9B8B00B29611 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		20B9A25D156D9B8B00B29611 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		E71AA225156DB024002776D7 /* Prospy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prospy.h; sourceTree = "<group>"; };
+		E71AA226156DB024002776D7 /* Prospy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prospy.m; sourceTree = "<group>"; };
 		E76305FE156D3847003BDAC5 /* Graph Paper - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone.png"; sourceTree = "<group>"; };
 		E76305FF156D3847003BDAC5 /* Graph Paper - iPhone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Graph Paper - iPhone@2x.png"; sourceTree = "<group>"; };
-=======
-		E748409E156D33C9001368ED /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
-		E748409F156D33C9001368ED /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
-		E74840A1156D3D99001368ED /* 71-compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "71-compass.png"; sourceTree = "<group>"; };
-		E7F708C8156D3F03007EC066 /* NSUMap002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = NSUMap002.jpg; sourceTree = "<group>"; };
->>>>>>> Stashed changes
+		E7C68033156D926D00DD30B6 /* InterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestViewController.h; sourceTree = "<group>"; };
+		E7C68034156D926D00DD30B6 /* InterestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,9 +157,9 @@
 				187BEB8C156C1B9B006810C5 /* Tweet.h */,
 				187BEB8D156C1B9B006810C5 /* Tweet.m */,
 				184000F6156D2B5800460230 /* TwitterView.h */,
+				E71AA225156DB024002776D7 /* Prospy.h */,
+				E71AA226156DB024002776D7 /* Prospy.m */,
 				184000F7156D2B5800460230 /* TwitterView.m */,
-				18B69AF3156D40BA007728AB /* Reference.h */,
-				18B69AF4156D40BA007728AB /* Reference.m */,
 				184000F3156D2B3600460230 /* FacebookView.h */,
 				184000F4156D2B3600460230 /* FacebookView.m */,
 			);
@@ -222,12 +223,16 @@
 				20B9A1BC156BE07200B29611 /* AppDelegate.h */,
 				20B9A1BD156BE07200B29611 /* AppDelegate.m */,
 				20B9A1BF156BE07200B29611 /* MainStoryboard_iPhone.storyboard */,
-				E748409E156D33C9001368ED /* Map.h */,
-				E748409F156D33C9001368ED /* Map.m */,
-				E7F708C8156D3F03007EC066 /* NSUMap002.jpg */,
-				E74840A1156D3D99001368ED /* 71-compass.png */,
-				18665D97156BE67E000A9740 /* NewsTableController.h */,
-				18665D98156BE67E000A9740 /* NewsTableController.m */,
+				E7C68033156D926D00DD30B6 /* InterestViewController.h */,
+				E7C68034156D926D00DD30B6 /* InterestViewController.m */,
+				20B9A25C156D9B8B00B29611 /* MapViewController.h */,
+				20B9A25D156D9B8B00B29611 /* MapViewController.m */,
+				18E7EF55156DB956008A0290 /* NewsTableController.h */,
+				18E7EF56156DB956008A0290 /* NewsTableController.m */,
+				18E7EF69156DC236008A0290 /* 103-map.png */,
+				18E7EF6A156DC236008A0290 /* 103-map@2x.png */,
+				18E7EF65156DC1AB008A0290 /* NSUMapSmall.png */,
+				18E7EF66156DC1AB008A0290 /* NSUMapSmall@2x.png */,
 			);
 			path = LSMSA;
 			sourceTree = "<group>";
@@ -341,13 +346,12 @@
 			files = (
 				20B9A1B8156BE07200B29611 /* InfoPlist.strings in Resources */,
 				20B9A1C1156BE07200B29611 /* MainStoryboard_iPhone.storyboard in Resources */,
-<<<<<<< Updated upstream
 				E7630600156D3847003BDAC5 /* Graph Paper - iPhone.png in Resources */,
 				E7630601156D3847003BDAC5 /* Graph Paper - iPhone@2x.png in Resources */,
-=======
-				E74840A2156D3D99001368ED /* 71-compass.png in Resources */,
-				E7F708C9156D3F03007EC066 /* NSUMap002.jpg in Resources */,
->>>>>>> Stashed changes
+				18E7EF67156DC1AB008A0290 /* NSUMapSmall.png in Resources */,
+				18E7EF68156DC1AB008A0290 /* NSUMapSmall@2x.png in Resources */,
+				18E7EF6B156DC236008A0290 /* 103-map.png in Resources */,
+				18E7EF6C156DC236008A0290 /* 103-map@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,16 +364,17 @@
 			files = (
 				20B9A1BA156BE07200B29611 /* main.m in Sources */,
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
-				18665D9A156BE67E000A9740 /* NewsTableController.m in Sources */,
 				18665DA6156BEE47000A9740 /* FacebookStatus.m in Sources */,
 				187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */,
-<<<<<<< Updated upstream
 				184000F5156D2B3600460230 /* FacebookView.m in Sources */,
 				184000F8156D2B5800460230 /* TwitterView.m in Sources */,
-				18B69AF5156D40BA007728AB /* Reference.m in Sources */,
+				E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */,
+				20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */,
+<<<<<<< HEAD
+				18E7EF57156DB956008A0290 /* NewsTableController.m in Sources */,
 =======
-				E74840A0156D33C9001368ED /* Map.m in Sources */,
->>>>>>> Stashed changes
+				E71AA227156DB024002776D7 /* Prospy.m in Sources */,
+>>>>>>> a102ae029663cc615fccdfc1d98767b9a753da68
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

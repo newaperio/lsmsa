@@ -19,8 +19,10 @@
 @property (nonatomic, retain) IBOutlet UITextField *city;
 @property (nonatomic, retain) IBOutlet UITextField *state;
 @property (nonatomic, retain) IBOutlet UITextField *zip;
+@property (nonatomic, retain) IBOutlet UITextField *concentration;
+@property (nonatomic, retain) IBOutlet UITextField *telephoneNumber;
 
-//all the rest
+
 -(IBAction)sendPressed:(id)sender;
 
 

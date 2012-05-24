@@ -10,7 +10,7 @@
 
 @implementation InterestViewController
 
-@synthesize name = _name, email = _email, currentSchool = _currentSchool, gradYear = _gradYear, address1 = _address1, address2 = _address2;
+@synthesize name = _name, email = _email, currentSchool = _currentSchool, gradYear = _gradYear, address1 = _address1, address2 = _address2, concentration = _concentration, telephoneNumber = _telephoneNumber;
 @synthesize city = _city, state = _state, zip = _zip;
 //all the rest
 
@@ -52,8 +52,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)sendPressed:(id)sender {
-    
+- (void)sendPressed:(id)sender {/*
+    Prospy *prospy = [[Prospy alloc]init];
+    prospy.name = self.name.text;
+    prospy.email = self.email.text;
+    prospy.gradYear = self.gradYear.text;
+    prospy.currentSchool = self.currentSchool.text;
+    prospy.address1 = self.address1.text;
+    prospy.address2 = self.address2.text;
+    prospy.city = self.city.text;
+    prospy.state = self.state.text;
+    prospy.telephoneNumber = self.telephoneNumber.text;
+    prospy.zip = self.zip.text;
+    prospy.concentration = self.concentration.text;*/
 }
 
 @end
