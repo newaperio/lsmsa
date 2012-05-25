@@ -183,7 +183,8 @@
         FacebookStatus *status = [_allUpdates objectAtIndex:indexPath.row];
         facebookCell.statusString = status.message;
         facebookCell.statusDate.text = [NSString stringWithFormat:@"%@ on facebook", [status.createdAt stringWithHumanizedTimeDifference]];
-        facebookCell.statusImage.image = [UIImage imageWithContentsOfFile:status.imageURL];
+        [facebookCell.statusImage prepareForReuse];
+        [facebookCell.statusImage setPathToNetworkImage:status.imageURL contentMode:UIViewContentModeScaleAspectFill];
         return facebookCell;
     } else if([[_allUpdates objectAtIndex: indexPath.row] class] == [Tweet class])
     {
@@ -201,7 +202,8 @@
             twitterCell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         Tweet *tweet= [_allUpdates objectAtIndex:indexPath.row];
-        twitterCell.thumb.image = [UIImage imageWithContentsOfFile:tweet.profileImageUrlString];
+        [twitterCell.thumb prepareForReuse];
+        [twitterCell.thumb setPathToNetworkImage:tweet.profileImageUrlString contentMode:UIViewContentModeScaleAspectFill];
         twitterCell.timeLabel.text = [NSString stringWithFormat:@"%@ on twitter", [tweet.createdAt stringWithHumanizedTimeDifference]];
         twitterCell.tweetString = tweet.text;
         return twitterCell;

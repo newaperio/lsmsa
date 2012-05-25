@@ -9,15 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "TTTAttributedLabel.h"
+#import "NINetworkImageView.h"
 
-@interface TweetTableViewCell : UITableViewCell {
-    UIImageView *_thumb;
-    UILabel *_timeLabel;
-    TTTAttributedLabel *_tweetLabel;
-    NSString *_tweetString;
-}
+@interface TweetTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) UIImageView *thumb;
+@property (nonatomic, strong) NINetworkImageView *thumb;
 @property (nonatomic, strong) UILabel *timeLabel;
 @property (nonatomic, strong) TTTAttributedLabel *tweetLabel;
 @property (nonatomic, copy) NSString *tweetString;

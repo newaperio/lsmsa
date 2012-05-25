@@ -64,20 +64,13 @@ static inline NSRegularExpression * UserRegularExpression() {
         [self addSubview:_timeLabel];
         
         //thumbnail
-        _thumb = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
+        _thumb = [[NINetworkImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
         _thumb.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
         [self addSubview:_thumb];
         
         self.clipsToBounds = YES;
     }
     return self;
-}
-
-- (void)layoutSubviews {
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor colorWithWhite:(246.0/256.0) alpha:1.0] CGColor], nil];
-    [self.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void)setTweetString:(NSString *)string {

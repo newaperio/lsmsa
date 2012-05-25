@@ -46,20 +46,13 @@ static CGFloat const kStatusTextFontSize = 12;
         [self addSubview:_statusDate];
         
         //thumbnail
-        _statusImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
+        _statusImage = [[NINetworkImageView alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
         _statusImage.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
         [self addSubview:_statusImage];
 
         self.clipsToBounds = YES;
     }
     return self;
-}
-
-- (void)layoutSubviews {
-    CAGradientLayer *gradient = [CAGradientLayer layer];
-    gradient.frame = self.bounds;
-    gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor] CGColor], (id)[[UIColor colorWithWhite:(246.0/256.0) alpha:1.0] CGColor], nil];
-    [self.layer insertSublayer:gradient atIndex:0];
 }
 
 - (void)setStatusString:(NSString *)string {

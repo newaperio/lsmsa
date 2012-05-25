@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import "TTTAttributedLabel.h"
+#import "NINetworkImageView.h"
 
 @interface StatusTableViewCell : UITableViewCell
 
 @property (nonatomic, retain) TTTAttributedLabel *statusLabel;
 @property (nonatomic, retain) NSString *statusString;
 @property (nonatomic, retain) UILabel *statusDate;
-@property (nonatomic, retain) UIImageView *statusImage;
+@property (nonatomic, retain) NINetworkImageView *statusImage;
 
 @end

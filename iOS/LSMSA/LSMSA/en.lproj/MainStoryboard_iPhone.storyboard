@@ -147,7 +147,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Interest" id="64a-wo-ARh"/>
+                    <tabBarItem key="tabBarItem" title="Interest" image="18-envelope.png" id="64a-wo-ARh"/>
                     <connections>
                         <outlet property="address1TextField" destination="PTe-an-Eaj" id="LFl-oI-fMn"/>
                         <outlet property="address2TextField" destination="UsY-gE-mgn" id="cFa-Cy-2Zr"/>
@@ -366,7 +366,7 @@
                             <outlet property="delegate" destination="eua-YF-sm3" id="REh-D0-UhG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="News" id="Po2-Rt-zEu"/>
+                    <tabBarItem key="tabBarItem" title="News" image="166-newspaper.png" id="Po2-Rt-zEu"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="QaN-1w-LLG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -428,6 +428,8 @@
     </scenes>
     <resources>
         <image name="103-map.png" width="26" height="21"/>
+        <image name="166-newspaper.png" width="28" height="23"/>
+        <image name="18-envelope.png" width="24" height="16"/>
         <image name="Graph Paper - iPhone.png" width="320" height="480"/>
     </resources>
     <classes>
