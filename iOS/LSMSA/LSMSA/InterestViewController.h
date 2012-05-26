@@ -7,22 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Prospy.h"
 
 @interface InterestViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UITextField *name;
-@property (nonatomic, retain) IBOutlet UITextField *email;
-@property (nonatomic, retain) IBOutlet UITextField *currentSchool;
-@property (nonatomic, retain) IBOutlet UITextField *gradYear;
-@property (nonatomic, retain) IBOutlet UITextField *address1;
-@property (nonatomic, retain) IBOutlet UITextField *address2;
-@property (nonatomic, retain) IBOutlet UITextField *city;
-@property (nonatomic, retain) IBOutlet UITextField *state;
-@property (nonatomic, retain) IBOutlet UITextField *zip;
+@property (nonatomic, strong) IBOutlet UITextField *nameTextField;
+@property (nonatomic, strong) IBOutlet UITextField *emailTextField;
+@property (nonatomic, strong) IBOutlet UITextField *currentSchoolTextField;
+@property (nonatomic, strong) IBOutlet UITextField *gradYearTextField;
+@property (nonatomic, strong) IBOutlet UITextField *address1TextField;
+@property (nonatomic, strong) IBOutlet UITextField *address2TextField;
+@property (nonatomic, strong) IBOutlet UITextField *cityTextField;
+@property (nonatomic, strong) IBOutlet UITextField *stateTextField;
+@property (nonatomic, strong) IBOutlet UITextField *zipTextField;
+@property (nonatomic, strong) IBOutlet UITextField *concentrationTextField;
+@property (nonatomic, strong) IBOutlet UITextField *telephoneNumberTextField;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 
-//all the rest
--(IBAction)sendPressed:(id)sender;
 
+- (IBAction)sendPressed:(id)sender;
 
 
 @end

@@ -13,6 +13,6 @@
 
 @property(nonatomic, retain) NSString* message;
 @property(nonatomic, retain) NSString* imageURL;
-@property(nonatomic, retain) NSDate* dateCreated;
+@property(nonatomic, retain) NSDate* createdAt;
 
 @end

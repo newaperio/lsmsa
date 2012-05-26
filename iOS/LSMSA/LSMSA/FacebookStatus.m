@@ -10,6 +10,6 @@
 
 @implementation FacebookStatus
 
-@synthesize message = _message, imageURL = _imageURL, dateCreated = _dateCreated;
+@synthesize message = _message, imageURL = _imageURL, createdAt = _createdAt;
 
 @end

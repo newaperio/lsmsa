@@ -10,6 +10,6 @@
 
 @implementation Tweet
 
-@synthesize textBody = _text, dateCreated = _date;
+@synthesize createdAt = _createdAt, profileImageUrlString = _profileImageUrlString, text = _text, fromUser = _fromUser;
 
 @end

@@ -16,9 +16,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Stb-kt-KDt" kind="relationship" relationship="viewControllers" id="xqS-D2-4D4"/>
-                        <segue destination="mbk-zL-KwK" kind="relationship" relationship="viewControllers" id="JBd-Ze-jEp"/>
                         <segue destination="eua-YF-sm3" kind="relationship" relationship="viewControllers" id="1cZ-1h-Jzo"/>
+                        <segue destination="mbk-zL-KwK" kind="relationship" relationship="viewControllers" id="JBd-Ze-jEp"/>
+                        <segue destination="Stb-kt-KDt" kind="relationship" relationship="viewControllers" id="xqS-D2-4D4"/>
                     </connections>
                 </tabBarController>
             </objects>
@@ -32,51 +32,51 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="z6B-s4-9NO">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="z6B-s4-9NO" customClass="TPKeyboardAvoidingScrollView">
                                 <rect key="frame" x="0.0" y="44" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street Address Line 1" minimumFontSize="17" id="PTe-an-Eaj">
-                                        <rect key="frame" x="20" y="176" width="280" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" id="cIO-TV-Vzk">
-                                        <rect key="frame" x="20" y="20" width="280" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="qtN-Nh-Cks">
-                                        <rect key="frame" x="20" y="59" width="280" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current High School" minimumFontSize="17" id="5KT-Kg-buM">
-                                        <rect key="frame" x="20" y="98" width="280" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Graduating Year" minimumFontSize="17" id="msp-bS-dW3">
                                         <rect key="frame" x="20" y="137" width="280" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" id="cIO-TV-Vzk">
+                                        <rect key="frame" x="20" y="5" width="280" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="qtN-Nh-Cks">
+                                        <rect key="frame" x="20" y="38" width="280" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current High School" minimumFontSize="17" id="5KT-Kg-buM">
+                                        <rect key="frame" x="20" y="71" width="280" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Graduating Year" minimumFontSize="17" id="msp-bS-dW3">
+                                        <rect key="frame" x="20" y="104" width="280" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" id="yb4-pz-sp2">
-                                        <rect key="frame" x="20" y="254" width="280" height="31"/>
+                                        <rect key="frame" x="20" y="202" width="280" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" minimumFontSize="17" id="nTc-bI-lNP">
-                                        <rect key="frame" x="20" y="293" width="130" height="31"/>
+                                        <rect key="frame" x="20" y="236" width="130" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iRg-RE-VG4">
                                         <rect key="frame" x="123" y="332" width="75" height="37"/>
@@ -89,18 +89,33 @@
                                         <state key="highlighted">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="Stb-kt-KDt" eventType="touchUpInside" id="blY-O1-jra"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" minimumFontSize="17" id="jbI-vI-cvK">
-                                        <rect key="frame" x="170" y="293" width="130" height="31"/>
+                                        <rect key="frame" x="170" y="236" width="130" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Street Address Line 2" minimumFontSize="17" id="UsY-gE-mgn">
-                                        <rect key="frame" x="20" y="215" width="280" height="31"/>
+                                        <rect key="frame" x="20" y="168" width="280" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telephone Number" minimumFontSize="17" id="qaS-6V-dJF">
+                                        <rect key="frame" x="20" y="270" width="280" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Area of Academic Interest" adjustsFontSizeToFit="NO" minimumFontSize="17" id="iIM-8a-m9M">
+                                        <rect key="frame" x="20" y="302" width="280" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                 </subviews>
                             </scrollView>
@@ -132,7 +147,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Interest" id="64a-wo-ARh"/>
+                    <tabBarItem key="tabBarItem" title="Interest" image="18-envelope.png" id="64a-wo-ARh"/>
+                    <connections>
+                        <outlet property="address1TextField" destination="PTe-an-Eaj" id="LFl-oI-fMn"/>
+                        <outlet property="address2TextField" destination="UsY-gE-mgn" id="cFa-Cy-2Zr"/>
+                        <outlet property="cityTextField" destination="yb4-pz-sp2" id="TUL-mx-Xz2"/>
+                        <outlet property="concentrationTextField" destination="iIM-8a-m9M" id="ij6-eO-xqR"/>
+                        <outlet property="currentSchoolTextField" destination="5KT-Kg-buM" id="UWD-3P-VEI"/>
+                        <outlet property="emailTextField" destination="qtN-Nh-Cks" id="J9a-RJ-GMo"/>
+                        <outlet property="gradYearTextField" destination="msp-bS-dW3" id="nLB-MF-hWT"/>
+                        <outlet property="nameTextField" destination="cIO-TV-Vzk" id="U0d-sa-1dX"/>
+                        <outlet property="scrollView" destination="z6B-s4-9NO" id="8MU-Sz-POf"/>
+                        <outlet property="stateTextField" destination="nTc-bI-lNP" id="97n-y8-Gob"/>
+                        <outlet property="telephoneNumberTextField" destination="qaS-6V-dJF" id="oN2-BG-mrb"/>
+                        <outlet property="zipTextField" destination="jbI-vI-cvK" id="dwv-m0-QpK"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-10" y="144"/>
@@ -159,11 +188,12 @@
                             <navigationBar contentMode="scaleToFill" id="E9c-0i-tTB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <navigationItem title="About" id="qTL-Ng-P00">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="l2r-4x-vv8">
                                             <connections>
-                                                <segue destination="4" kind="modal" modalTransitionStyle="crossDissolve" id="YyV-ob-Vt7"/>
+                                                <segue destination="4" kind="modal" identifier="aboutToTabBarControllerSegue" modalTransitionStyle="crossDissolve" id="l4E-pa-EOI"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -177,7 +207,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Matthew Fults - Rails Frame" lineBreakMode="tailTruncation" minimumFontSize="10" id="Hxq-DQ-At7">
-                                <rect key="frame" x="83" y="271" width="371" height="29"/>
+                                <rect key="frame" x="80" y="271" width="371" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -191,7 +221,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Jaryd Rester - Controller" lineBreakMode="tailTruncation" minimumFontSize="10" id="3Lk-Uy-jsI">
-                                <rect key="frame" x="83" y="215" width="308" height="29"/>
+                                <rect key="frame" x="85" y="215" width="308" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -212,28 +242,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Maryssa Dupre - About" lineBreakMode="tailTruncation" minimumFontSize="10" id="6CS-JD-6S7">
-                                <rect key="frame" x="75" y="96" width="266" height="75"/>
+                                <rect key="frame" x="73" y="96" width="266" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Everett Moser - News" lineBreakMode="tailTruncation" minimumFontSize="10" id="gMD-Ie-QsB">
-                                <rect key="frame" x="80" y="186" width="286" height="29"/>
+                                <rect key="frame" x="79" y="186" width="286" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Meagan Muldoon - Map" lineBreakMode="tailTruncation" minimumFontSize="10" id="YHQ-8y-sgp">
-                                <rect key="frame" x="65" y="201" width="275" height="29"/>
+                                <rect key="frame" x="66" y="201" width="275" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Alex Fontenot - News" lineBreakMode="tailTruncation" minimumFontSize="10" id="2Zb-dl-NfM">
-                                <rect key="frame" x="83" y="290" width="165" height="21"/>
+                                <rect key="frame" x="82" y="290" width="165" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -247,7 +277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Class of 2013" lineBreakMode="tailTruncation" minimumFontSize="10" id="uM8-Wo-dW1">
-                                <rect key="frame" x="113" y="179" width="105" height="21"/>
+                                <rect key="frame" x="119" y="179" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -261,7 +291,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Hunter Bouillion - News" lineBreakMode="tailTruncation" minimumFontSize="10" id="4L2-Rg-9oo">
-                                <rect key="frame" x="75" y="308" width="181" height="21"/>
+                                <rect key="frame" x="74" y="308" width="181" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -288,8 +318,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extreme Help From" lineBreakMode="tailTruncation" minimumFontSize="10" id="bGv-zO-Y84">
-                                <rect key="frame" x="113" y="390" width="148" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extreme Assistance From" lineBreakMode="tailTruncation" minimumFontSize="10" id="bGv-zO-Y84">
+                                <rect key="frame" x="97" y="387" width="148" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -310,7 +340,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Christian Bankester - Class of 2009" lineBreakMode="tailTruncation" minimumFontSize="10" id="lpE-tc-mlk">
-                                <rect key="frame" x="49" y="434" width="270" height="21"/>
+                                <rect key="frame" x="51" y="434" width="270" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -328,63 +358,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ol6-OI-dxt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="eua-YF-sm3" customClass="NewsTableController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gd8-kR-vdm">
-                        <rect key="frame" x="0.0" y="20" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Tweet" rowHeight="200" id="hof-iq-uf3" customClass="TwitterView">
-                                <rect key="frame" x="0.0" y="22" width="320" height="200"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="199"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="yid-W7-RIm">
-                                            <rect key="frame" x="130" y="117" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sturffs" lineBreakMode="tailTruncation" minimumFontSize="10" id="ds1-cl-o6k">
-                                            <rect key="frame" x="135" y="158" width="51" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Status" rowHeight="204" id="ci6-aL-ohj" customClass="FacebookView">
-                                <rect key="frame" x="0.0" y="222" width="320" height="204"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sturffs" lineBreakMode="tailTruncation" minimumFontSize="10" id="NBt-fc-OSa">
-                                            <rect key="frame" x="135" y="162" width="51" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="eua-YF-sm3" id="rNu-f5-akq"/>
                             <outlet property="delegate" destination="eua-YF-sm3" id="REh-D0-UhG"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="News" id="0uj-rB-bLv"/>
+                    <tabBarItem key="tabBarItem" title="News" image="166-newspaper.png" id="Po2-Rt-zEu"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="QaN-1w-LLG"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="-10" y="-444"/>
@@ -443,28 +428,27 @@
     </scenes>
     <resources>
         <image name="103-map.png" width="26" height="21"/>
+        <image name="166-newspaper.png" width="28" height="23"/>
+        <image name="18-envelope.png" width="24" height="16"/>
         <image name="Graph Paper - iPhone.png" width="320" height="480"/>
     </resources>
     <classes>
-        <class className="FacebookView" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="statusText" candidateClass="UILabel"/>
-            </relationships>
-        </class>
         <class className="InterestViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/InterestViewController.h"/>
             <relationships>
                 <relationship kind="action" name="sendPressed:"/>
-                <relationship kind="outlet" name="address1" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="address2" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="city" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="currentSchool" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="email" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="gradYear" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="state" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="zip" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="address1TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="address2TextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="cityTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="concentrationTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="currentSchoolTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="emailTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="gradYearTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="stateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="telephoneNumberTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="zipTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="MapViewController" superclassName="UIViewController">
@@ -476,11 +460,8 @@
         <class className="NewsTableController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsTableController.h"/>
         </class>
-        <class className="TwitterView" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TwitterView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tweetText" candidateClass="UILabel"/>
-            </relationships>
+        <class className="TPKeyboardAvoidingScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TPKeyboardAvoidingScrollView.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

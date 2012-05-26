@@ -8,11 +8,12 @@
 
 #import "InterestViewController.h"
 
+static CGFloat const kTabBarHeight = 49;
+
 @implementation InterestViewController
 
-@synthesize name = _name, email = _email, currentSchool = _currentSchool, gradYear = _gradYear, address1 = _address1, address2 = _address2;
-@synthesize city = _city, state = _state, zip = _zip;
-//all the rest
+@synthesize nameTextField = _nameTextField, emailTextField = _emailTextField, currentSchoolTextField = _currentSchoolTextField, gradYearTextField = _gradYearTextField, address1TextField = _address1TextField, address2TextField = _address2TextField, concentrationTextField = _concentrationTextField, telephoneNumberTextField = _telephoneNumberTextField;
+@synthesize cityTextField = _cityTextField, stateTextField = _stateTextField, zipTextField = _zipTextField, scrollView = _scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,14 +37,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.scrollView.contentSize = self.scrollView.frame.size;
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -53,6 +52,18 @@
 }
 
 - (void)sendPressed:(id)sender {
+    Prospy *prospy = [[Prospy alloc] init];
+    prospy.name = self.nameTextField.text;
+    prospy.email = self.emailTextField.text;
+    prospy.gradYear = self.gradYearTextField.text;
+    prospy.currentSchool = self.currentSchoolTextField.text;
+    prospy.address1 = self.address1TextField.text;
+    prospy.address2 = self.address2TextField.text;
+    prospy.city = self.cityTextField.text;
+    prospy.state = self.stateTextField.text;
+    prospy.telephoneNumber = self.telephoneNumberTextField.text;
+    prospy.zip = self.zipTextField.text;
+    prospy.concentration = self.concentrationTextField.text;
     
 }
 
