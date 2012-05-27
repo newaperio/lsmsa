@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 #import "Prospy.h"
 
 @interface InterestViewController : UIViewController

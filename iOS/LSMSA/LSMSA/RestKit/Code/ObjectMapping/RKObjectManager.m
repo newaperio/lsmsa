@@ -23,6 +23,7 @@
 #import "RKManagedObjectStore.h"
 #import "RKManagedObjectLoader.h"
 #import "Support.h"
+#import "RKErrorMessage.h"
 
 NSString* const RKObjectManagerDidBecomeOfflineNotification = @"RKDidEnterOfflineModeNotification";
 NSString* const RKObjectManagerDidBecomeOnlineNotification = @"RKDidEnterOnlineModeNotification";
@@ -78,6 +79,12 @@ static dispatch_queue_t defaultMappingQueue = nil;
 
         self.serializationMIMEType = RKMIMETypeFormURLEncoded;
         self.mappingQueue = [RKObjectManager defaultMappingQueue];
+
+        // Setup default error message mappings
+        RKObjectMapping *errorMapping = [RKObjectMapping mappingForClass:[RKErrorMessage class]];
+        errorMapping.rootKeyPath = @"errors";
+        [errorMapping mapKeyPath:@"" toAttribute:@"errorMessage"];
+        _mappingProvider.errorMapping = errorMapping;
 
         [self addObserver:self
                forKeyPath:@"client.reachabilityObserver"

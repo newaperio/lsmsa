@@ -65,6 +65,30 @@ static CGFloat const kTabBarHeight = 49;
     prospy.zip = self.zipTextField.text;
     prospy.concentration = self.concentrationTextField.text;
     
+    RKObjectManager *objectManager = [RKObjectManager objectManagerWithBaseURLString:@"http://blazing-fog-9465.herokuapp.com/"];
+    objectManager.client.username = @"LsmsaAdmin";
+    objectManager.client.password = @"eagles";
+    objectManager.client.authenticationType = RKRequestAuthenticationTypeHTTP;
+    
+    [RKObjectManager setSharedManager:objectManager];
+    
+    RKObjectMapping *prospyMapping = [RKObjectMapping mappingForClass:[Prospy class]];
+    [prospyMapping mapKeyPathsToAttributes:@"name", @"name", @"email", @"email", @"high_school", @"currentSchool", @"address_1", @"address1", @"address_2", @"address2", @"city", @"city", @"state", @"state", @"zip", @"zip", @"telephone_number", @"telephoneNumber", @"year", @"gradYear", nil];
+    [objectManager.mappingProvider setObjectMapping:prospyMapping forKeyPath:@"prosipies"];
+    [objectManager.mappingProvider setSerializationMapping:[prospyMapping inverseMapping] forClass:[Prospy class]];
+    
+    [objectManager.router routeClass:[Prospy class] toResourcePath:@"prospies" forMethod:RKRequestMethodPOST];
+    
+    __weak RKObjectMapping *bProspyMapping = prospyMapping;
+    [objectManager postObject:prospy usingBlock:^(RKObjectLoader *loader) {
+        loader.objectMapping = bProspyMapping;
+        loader.onDidFailLoadWithError = ^(NSError *error) {
+            NSLog(@"%@", error);
+        };
+        loader.onDidFailWithError = ^(NSError *error) {
+            NSLog(@"%@", error);
+        };
+    }];
 }
 
 @end
