@@ -1,4 +1,6 @@
 class ProspiesController < ApplicationController
+  skip_before_filter  :verify_authenticity_token, only: :create, if: Proc.new { |r| r.request.format.json? }
+  
   # GET /prospies
   # GET /prospies.json
   def index
