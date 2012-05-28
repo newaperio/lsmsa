@@ -17,6 +17,7 @@
     // Override point for customization after application launch.
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    RKLogConfigureByName("RestKit/UI", RKLogLevelTrace);
     return YES;
 }
 							

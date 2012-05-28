@@ -7,19 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
 
 @interface Prospy : NSObject
 
-@property (nonatomic, retain) IBOutlet NSString *name;
-@property (nonatomic, retain) IBOutlet NSString *email;
-@property (nonatomic, retain) IBOutlet NSString *currentSchool;
-@property (nonatomic, retain) IBOutlet NSString *gradYear;
-@property (nonatomic, retain) IBOutlet NSString *address1;
-@property (nonatomic, retain) IBOutlet NSString *address2;
-@property (nonatomic, retain) IBOutlet NSString *city;
-@property (nonatomic, retain) IBOutlet NSString *state;
-@property (nonatomic, retain) IBOutlet NSString *zip;
-@property (nonatomic, retain) IBOutlet NSString *concentration;
-@property (nonatomic, retain) IBOutlet NSString *telephoneNumber;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *email;
+@property (nonatomic, retain) NSString *currentSchool;
+@property (nonatomic, retain) NSString *gradYear;
+@property (nonatomic, retain) NSString *address1;
+@property (nonatomic, retain) NSString *address2;
+@property (nonatomic, retain) NSString *city;
+@property (nonatomic, retain) NSString *state;
+@property (nonatomic, retain) NSString *zip;
+@property (nonatomic, retain) NSString *concentration_id;
+@property (nonatomic, retain) NSString *interest;
+@property (nonatomic, retain) NSString *telephoneNumber;
+
+-(void)sendInterest;
 
 @end

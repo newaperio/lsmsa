@@ -2,22 +2,22 @@
 //  InterestViewController.m
 //  LSMSA
 //
-//  Created by Chris King on 5/23/12.
+//  Created by Evan Cordell on 5/27/12.
 //  Copyright (c) 2012 NewAperio. All rights reserved.
 //
 
 #import "InterestViewController.h"
 
-static CGFloat const kTabBarHeight = 49;
+@interface InterestViewController ()
+@property (nonatomic, strong) RKTableController *tableController;
+@end
 
 @implementation InterestViewController
+@synthesize tableController;
 
-@synthesize nameTextField = _nameTextField, emailTextField = _emailTextField, currentSchoolTextField = _currentSchoolTextField, gradYearTextField = _gradYearTextField, address1TextField = _address1TextField, address2TextField = _address2TextField, concentrationTextField = _concentrationTextField, telephoneNumberTextField = _telephoneNumberTextField;
-@synthesize cityTextField = _cityTextField, stateTextField = _stateTextField, zipTextField = _zipTextField, scrollView = _scrollView;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -37,58 +37,203 @@ static CGFloat const kTabBarHeight = 49;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.scrollView.contentSize = self.scrollView.frame.size;
+    self.tableController = [RKTableController tableControllerForTableViewController:self];
+    Prospy *prospy = [[Prospy alloc] init];
+    
+    RKForm *form = [RKForm formForObject:prospy usingBlock:^(RKForm *form) 
+    {
+        __weak RKForm *bForm = form;
+        [form addSectionUsingBlock:^(RKFormSection *section) 
+        {
+            section.headerTitle = @"Required";
+            section.headerHeight = 30;
+            [section addRowForAttribute:@"name" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+            {
+                tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                tableItem.textField.returnKeyType = UIReturnKeyNext;
+                tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                tableItem.textField.delegate = self;
+                tableItem.textField.placeholder = @"Name";
+                [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+            }];
+            [section addRowForAttribute:@"email" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Email";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+
+        }];
+        
+        [form addSectionUsingBlock:^(RKFormSection *section) {
+            section.headerTitle = @"Optional";
+            section.headerHeight = 30;
+            [section addRowForAttribute:@"telephoneNumber" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Telephone Number";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"address1" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Address 1";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"address2" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Address 2";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"city" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"City";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"state" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"State";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"zip" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Zip Code";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"interest" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Interest";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"currentSchool" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Current School";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"gradYear" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Graduation Year";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+            
+            [section addRowForAttribute:@"concentration_id" withControlType:RKFormControlTypeTextField usingBlock:^(RKControlTableItem *tableItem) 
+             {
+                 tableItem.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+                 tableItem.textField.returnKeyType = UIReturnKeyNext;
+                 tableItem.textField.keyboardAppearance = UIKeyboardAppearanceAlert;
+                 tableItem.textField.delegate = self;
+                 tableItem.textField.placeholder = @"Concentration";
+                 [tableItem.textField setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+                 [tableItem.textField setAutocorrectionType:UITextAutocorrectionTypeNo];
+             }];
+        }];
+        
+        [form addSectionUsingBlock:^(RKFormSection *section) {
+            RKTableItem *tableItem = [RKTableItem tableItemWithCellClass:[SubmitCell class]];
+            tableItem.cellMapping.selectionStyle = UITableViewCellSelectionStyleNone;
+            tableItem.cellMapping.onCellWillAppearForObjectAtIndexPath = ^ (UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+                [[cell valueForKey:@"button"] addTarget:bForm action:@selector(submit) forControlEvents:UIControlEventTouchUpInside];
+            };
+            [section addTableItem:tableItem];
+        }];
+        form.onSubmit = ^ {
+            [[self.view findFirstResponder] resignFirstResponder];
+            Prospy *prospy = (Prospy *) bForm.object;
+            [prospy sendInterest];
+        };
+    }];
+
+    [self.tableController loadForm:form];
+
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (void)sendPressed:(id)sender {
-    Prospy *prospy = [[Prospy alloc] init];
-    prospy.name = self.nameTextField.text;
-    prospy.email = self.emailTextField.text;
-    prospy.gradYear = self.gradYearTextField.text;
-    prospy.currentSchool = self.currentSchoolTextField.text;
-    prospy.address1 = self.address1TextField.text;
-    prospy.address2 = self.address2TextField.text;
-    prospy.city = self.cityTextField.text;
-    prospy.state = self.stateTextField.text;
-    prospy.telephoneNumber = self.telephoneNumberTextField.text;
-    prospy.zip = self.zipTextField.text;
-    prospy.concentration = self.concentrationTextField.text;
-    
-    RKObjectManager *objectManager = [RKObjectManager objectManagerWithBaseURLString:@"http://blazing-fog-9465.herokuapp.com/"];
-    objectManager.client.username = @"LsmsaAdmin";
-    objectManager.client.password = @"eagles";
-    objectManager.client.authenticationType = RKRequestAuthenticationTypeHTTP;
-    
-    [RKObjectManager setSharedManager:objectManager];
-    
-    RKObjectMapping *prospyMapping = [RKObjectMapping mappingForClass:[Prospy class]];
-    [prospyMapping mapKeyPathsToAttributes:@"name", @"name", @"email", @"email", @"high_school", @"currentSchool", @"address_1", @"address1", @"address_2", @"address2", @"city", @"city", @"state", @"state", @"zip", @"zip", @"telephone_number", @"telephoneNumber", @"year", @"gradYear", nil];
-    [objectManager.mappingProvider setObjectMapping:prospyMapping forKeyPath:@"prosipies"];
-    [objectManager.mappingProvider setSerializationMapping:[prospyMapping inverseMapping] forClass:[Prospy class]];
-    
-    [objectManager.router routeClass:[Prospy class] toResourcePath:@"prospies" forMethod:RKRequestMethodPOST];
-    
-    __weak RKObjectMapping *bProspyMapping = prospyMapping;
-    [objectManager postObject:prospy usingBlock:^(RKObjectLoader *loader) {
-        loader.objectMapping = bProspyMapping;
-        loader.onDidFailLoadWithError = ^(NSError *error) {
-            NSLog(@"%@", error);
-        };
-        loader.onDidFailWithError = ^(NSError *error) {
-            NSLog(@"%@", error);
-        };
-    }];
 }
 
 @end

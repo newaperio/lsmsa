@@ -22,6 +22,8 @@
 		18E7EF6B156DC236008A0290 /* 103-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E7EF69156DC236008A0290 /* 103-map.png */; };
 		18E7EF6C156DC236008A0290 /* 103-map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18E7EF6A156DC236008A0290 /* 103-map@2x.png */; };
 		18E7EF87156DC3B9008A0290 /* NewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7EF56156DB956008A0290 /* NewsTableController.m */; };
+		20141B4F1572E12300C6784C /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20141B4E1572E12300C6784C /* InterestViewController.m */; };
+		20141B581572EF4700C6784C /* SubmitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20141B571572EF4700C6784C /* SubmitCell.m */; };
 		20B9A1AE156BE07200B29611 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AD156BE07200B29611 /* UIKit.framework */; };
 		20B9A1B0156BE07200B29611 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1AF156BE07200B29611 /* Foundation.framework */; };
 		20B9A1B2156BE07200B29611 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9A1B1156BE07200B29611 /* CoreGraphics.framework */; };
@@ -68,7 +70,6 @@
 		20B9A3CD156F031E00B29611 /* 166-newspaper.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A3CB156F031E00B29611 /* 166-newspaper.png */; };
 		20B9A3D0156F03EA00B29611 /* 18-envelope@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A3CE156F03EA00B29611 /* 18-envelope@2x.png */; };
 		20B9A3D1156F03EA00B29611 /* 18-envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 20B9A3CF156F03EA00B29611 /* 18-envelope.png */; };
-		E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C68034156D926D00DD30B6 /* InterestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,10 @@
 		18E7EF66156DC1AB008A0290 /* NSUMapSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NSUMapSmall@2x.png"; sourceTree = "<group>"; };
 		18E7EF69156DC236008A0290 /* 103-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map.png"; sourceTree = "<group>"; };
 		18E7EF6A156DC236008A0290 /* 103-map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "103-map@2x.png"; sourceTree = "<group>"; };
+		20141B4D1572E12300C6784C /* InterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestViewController.h; sourceTree = "<group>"; };
+		20141B4E1572E12300C6784C /* InterestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestViewController.m; sourceTree = "<group>"; };
+		20141B561572EF4700C6784C /* SubmitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitCell.h; sourceTree = "<group>"; };
+		20141B571572EF4700C6784C /* SubmitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitCell.m; sourceTree = "<group>"; };
 		20B9A1A9156BE07200B29611 /* LSMSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSMSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B9A1AD156BE07200B29611 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		20B9A1AF156BE07200B29611 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -226,8 +231,8 @@
 		20B9A3CF156F03EA00B29611 /* 18-envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "18-envelope.png"; sourceTree = "<group>"; };
 		E71AA225156DB024002776D7 /* Prospy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prospy.h; sourceTree = "<group>"; };
 		E71AA226156DB024002776D7 /* Prospy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Prospy.m; sourceTree = "<group>"; };
-		E7C68033156D926D00DD30B6 /* InterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestViewController.h; sourceTree = "<group>"; };
-		E7C68034156D926D00DD30B6 /* InterestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestViewController.m; sourceTree = "<group>"; };
+		E7C68033156D926D00DD30B6 /* OldInterestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldInterestViewController.h; sourceTree = "<group>"; };
+		E7C68034156D926D00DD30B6 /* OldInterestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldInterestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,12 +365,14 @@
 		20B9A27E156EBD5100B29611 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E7C68033156D926D00DD30B6 /* InterestViewController.h */,
-				E7C68034156D926D00DD30B6 /* InterestViewController.m */,
+				E7C68033156D926D00DD30B6 /* OldInterestViewController.h */,
+				E7C68034156D926D00DD30B6 /* OldInterestViewController.m */,
 				20B9A25C156D9B8B00B29611 /* MapViewController.h */,
 				20B9A25D156D9B8B00B29611 /* MapViewController.m */,
 				18E7EF55156DB956008A0290 /* NewsTableController.h */,
 				18E7EF56156DB956008A0290 /* NewsTableController.m */,
+				20141B4D1572E12300C6784C /* InterestViewController.h */,
+				20141B4E1572E12300C6784C /* InterestViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -373,6 +380,8 @@
 		20B9A27F156EBD5B00B29611 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20141B561572EF4700C6784C /* SubmitCell.h */,
+				20141B571572EF4700C6784C /* SubmitCell.m */,
 				20B9A2A9156EC4F400B29611 /* StatusTableViewCell.h */,
 				20B9A2AA156EC4F400B29611 /* StatusTableViewCell.m */,
 				20B9A2AB156EC4F400B29611 /* TweetTableViewCell.h */,
@@ -636,7 +645,6 @@
 				20B9A1BE156BE07200B29611 /* AppDelegate.m in Sources */,
 				18665DA6156BEE47000A9740 /* FacebookStatus.m in Sources */,
 				187BEB8E156C1B9B006810C5 /* Tweet.m in Sources */,
-				E7C68035156D926D00DD30B6 /* InterestViewController.m in Sources */,
 				20B9A25E156D9B8B00B29611 /* MapViewController.m in Sources */,
 				20B9A2A1156EBF0100B29611 /* TTTAttributedLabel.m in Sources */,
 				20B9A2A7156EC0A800B29611 /* GTMNSString+HTML.m in Sources */,
@@ -667,6 +675,8 @@
 				20B9A3BC156F015200B29611 /* UIView+NimbusCore.m in Sources */,
 				20B9A3C4156F017400B29611 /* NINetworkImageRequest.m in Sources */,
 				20B9A3C5156F017400B29611 /* NINetworkImageView.m in Sources */,
+				20141B4F1572E12300C6784C /* InterestViewController.m in Sources */,
+				20141B581572EF4700C6784C /* SubmitCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
